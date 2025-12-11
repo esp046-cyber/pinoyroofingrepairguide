@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipino Roofing Repair Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: #333;
+            padding: 1%;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 12px 1%;
+            text-align: center;
+            border-bottom: 3px solid #654321;
+        }
+        
+        header h1 {
+            font-size: 1.2em;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-bottom: 2px solid #ddd;
+            overflow-x: auto;
+            padding: 0 1%;
+        }
+        
+        .nav-tab {
+            padding: 12px 16px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #666;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .nav-tab:hover {
+            background: #e8e8e8;
+            color: #8B4513;
+        }
+        
+        .nav-tab.active {
+            color: #8B4513;
+            border-bottom-color: #8B4513;
+            background: white;
+        }
+        
+        .content {
+            padding: 1%;
+        }
+        
+        .section {
+            display: none;
+            animation: fadeIn 0.4s;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            border: 1px solid #ddd;
+            border-left: 4px solid #8B4513;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: #8B4513;
+            font-size: 1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card h3::before {
+            content: '🔧';
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+        
+        .card p, .card ul {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .card ul {
+            margin-left: 18px;
+            margin-top: 8px;
+        }
+        
+        .card li {
+            margin-bottom: 6px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left-color: #ff9800;
+            border: 1px solid #ffe69c;
+        }
+        
+        .warning h3::before {
+            content: '⚠️';
+        }
+        
+        .tip {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+            border: 1px solid #bee5eb;
+        }
+        
+        .tip h3::before {
+            content: '💡';
+        }
+        
+        .roof-type {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin: 4px 4px 4px 0;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: 600;
+            margin-right: 8px;
+            font-size: 0.85em;
+        }
+        
+        footer {
+            background: #f5f5f5;
+            padding: 12px 1%;
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+            border-top: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Gabay sa Pagkukumpuni ng Bubong</h1>
+        </header>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showSection('types')">Uri ng Bubong</button>
+            <button class="nav-tab" onclick="showSection('problems')">Mga Problema</button>
+            <button class="nav-tab" onclick="showSection('repairs')">Pagkukumpuni</button>
+            <button class="nav-tab" onclick="showSection('materials')">Materyales</button>
+            <button class="nav-tab" onclick="showSection('tips')">Mga Tip</button>
+            <button class="nav-tab" onclick="showSection('diy')">DIY Guide</button>
+            <button class="nav-tab" onclick="showSection('emergency')">Emergency</button>
+            <button class="nav-tab" onclick="showSection('maintenance')">Maintenance</button>
+            <button class="nav-tab" onclick="showSection('calculator')">Calculator</button>
+            <button class="nav-tab" onclick="showSection('techniques')">Techniques</button>
+            <button class="nav-tab" onclick="showSection('advanced')">Advanced</button>
+            <button class="nav-tab" onclick="showSection('professional')">Pro Tips</button>
+            <button class="nav-tab" onclick="showSection('troubleshoot')">Troubleshoot</button>
+            <button class="nav-tab" onclick="showSection('safety')">Safety</button>
+            <button class="nav-tab" onclick="showSection('specialty')">Specialty</button>
+        </div>
+        
+        <div class="content">
+            <!-- Uri ng Bubong Section -->
+            <div id="types" class="section active">
+                <div class="card">
+                    <h3>Yero (Galvanized Iron Sheet)</h3>
+                    <p>Pinakakaraniwan sa Pilipinas. Matibay, mura, at madaling ikabit.</p>
+                    <div class="roof-type">Residential</div>
+                    <div class="roof-type">Commercial</div>
+                    <ul>
+                        <li>Tagal ng buhay: 10-15 taon</li>
+                        <li>Presyo: ₱180-350 bawat piraso</li>
+                        <li>Karaniwang sukat: 6ft, 8ft, 10ft</li>
+                        <li>Gauge: #24, #26, #28 (mas mababa, mas makapal)</li>
+                        <li>Kapal: 0.3mm - 0.5mm</li>
+                        <li>Lapad: 2ft standard</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Long Span</h3>
+                    <p>Mas mahaba at mas matibay kaysa yero. May iba't ibang kulay.</p>
+                    <div class="roof-type">Industrial</div>
+                    <div class="roof-type">Warehouse</div>
+                    <ul>
+                        <li>Tagal ng buhay: 15-20 taon</li>
+                        <li>Presyo: ₱350-600 bawat piraso</li>
+                        <li>Karaniwang sukat: 12ft, 16ft, 20ft</li>
+                        <li>May paint coating na UV resistant</li>
+                        <li>Popular colors: Red oxide, blue, green</li>
+                        <li>Mas maganda ang finish kaysa plain yero</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Asbesto (Fiber Cement)</h3>
+                    <p>Lumang uri pero matatag. Hindi na masyadong ginagamit ngayon.</p>
+                    <div class="roof-type">Old Houses</div>
+                    <ul>
+                        <li>Tagal ng buhay: 20-30 taon</li>
+                        <li>Babala: Delikado kung basag (asbestos)</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Nipa/Pawid</h3>
+                    <p>Tradisyonal na bubong mula sa dahon ng nipa.</p>
+                    <div class="roof-type">Provincial</div>
+                    <div class="roof-type">Bahay Kubo</div>
+                    <ul>
+                        <li>Tagal ng buhay: 3-5 taon</li>
+                        <li>Kelangan regular na maintenance</li>
+                        <li>Natural cooling effect</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Tile/Tisa</h3>
+                    <p>Clay o concrete tiles. Maganda tingnan at matibay.</p>
+                    <div class="roof-type">Premium Homes</div>
+                    <ul>
+                        <li>Tagal ng buhay: 50+ taon</li>
+                        <li>Presyo: ₱40-80 per piece</li>
+                        <li>Fire resistant at weather proof</li>
+                        <li>Mabigat - kailangan malakas na truss</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Polycarbonate</h3>
+                    <p>Transparent o translucent roofing. Maganda sa patio.</p>
+                    <div class="roof-type">Patio</div>
+                    <div class="roof-type">Carport</div>
+                    <ul>
+                        <li>Tagal ng buhay: 10-15 taon</li>
+                        <li>Presyo: ₱300-800 per sheet</li>
+                        <li>May UV protection</li>
+                        <li>Papasok ang liwanag pero hindi umulan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Professional Tips Section -->
+            <div id="professional" class="section">
+                <div class="card tip">
+                    <h3>Contractor Quality Control Checklist</h3>
+                    <p><strong>Before hiring, check these:</strong></p>
+                    <ul>
+                        <li>✓ <strong>License & Insurance:</strong> Valid business permit, liability insurance</li>
+                        <li>✓ <strong>Portfolio:</strong> At least 5 recent similar projects</li>
+                        <li>✓ <strong>References:</strong> Talk to 3+ previous clients</li>
+                        <li>✓ <strong>Written Estimate:</strong> Itemized breakdown of costs</li>
+                        <li>✓ <strong>Timeline:</strong> Clear start and completion dates</li>
+                        <li>✓ <strong>Warranty:</strong> Minimum 1-year workmanship guarantee</li>
+                        <li>✓ <strong>Materials Specs:</strong> Brand and grade specified</li>
+                        <li>✓ <strong>Payment Terms:</strong> Never more than 30% upfront</li>
+                        <li>✓ <strong>Contract:</strong> All details in writing, signed</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Trade Secrets: Weather Reading for Roofing</h3>
+                    <p><strong>Best Conditions:</strong></p>
+                    <ul>
+                        <li><strong>Temperature:</strong> 15-30°C ideal (materials expand/contract properly)</li>
+                        <li><strong>Humidity:</strong> Below 70% (sealants cure faster)</li>
+                        <li><strong>Wind:</strong> Under 20 km/h (safe working, no sheet lifting)</li>
+                        <li><strong>Forecast:</strong> 48-hour dry window minimum</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Warning Signs to STOP Work:</strong></p>
+                    <ul>
+                        <li>🚫 Dark clouds forming (rain within 1-2 hours)</li>
+                        <li>🚫 Sudden temperature drop (weather change coming)</li>
+                        <li>🚫 Wind gusts increasing (sheet control difficult)</li>
+                        <li>🚫 Morning dew not evaporating by 9 AM (high humidity)</li>
+                        <li>🚫 Surface temperature above 50°C (too hot to touch safely)</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Professional Estimation Formula</h3>
+                    <p><strong>Material Calculation:</strong></p>
+                    <p><span class="step-number">1</span> Base Area = Length × Width</p>
+                    <p><span class="step-number">2</span> Actual Area = Base × Pitch Factor</p>
+                    <p><span class="step-number">3</span> Add 10% for cuts and wastage</p>
+                    <p><span class="step-number">4</span> Add 15% if complex shape (multiple valleys)</p>
+                    <p><span class="step-number">5</span> Sheets Needed = Total Area ÷ Sheet Coverage</p>
+                    <p><span class="step-number">6</span> Round UP to nearest whole number</p>
+                    
+                    <p style="margin-top:12px;"><strong>Fastener Calculation:</strong></p>
+                    <ul>
+                        <li>Standard: 3 screws per linear foot of sheet width</li>
+                        <li>High-wind: 5 screws per linear foot</li>
+                        <li>Add 50 extra screws per project (mistakes/drops)</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Labor Estimation:</strong></p>
+                    <ul>
+                        <li>Simple roof: 10-15 sqm per day per worker</li>
+                        <li>Complex roof: 6-10 sqm per day per worker</li>
+                        <li>Factor: accessibility, pitch, worker experience</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Advanced Water Management Systems</h3>
+                    <p><strong>Concept: Multi-Barrier Defense</strong></p>
+                    
+                    <p style="margin-top:8px;"><strong>Barrier 1: Surface Drainage (Primary)</strong></p>
+                    <ul>
+                        <li>Proper slope minimum 10 degrees</li>
+                        <li>No flat spots where water pools</li>
+                        <li>Clean gutters channel water away</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Barrier 2: Overlaps & Seals (Secondary)</strong></p>
+                    <ul>
+                        <li>Correct overlap direction (opposite wind)</li>
+                        <li>Sealant at all horizontal joints</li>
+                        <li>Flashing at all penetrations</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Barrier 3: Underlayment (Tertiary)</strong></p>
+                    <ul>
+                        <li>Waterproof membrane under metal</li>
+                        <li>Catches any water that passes roofing</li>
+                        <li>Channels to drainage points</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Barrier 4: Ventilation (Backup)</strong></p>
+                    <ul>
+                        <li>Prevents condensation (looks like leak)</li>
+                        <li>Removes moisture from attic space</li>
+                        <li>Extends overall roof life by decades</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Material Selection Decision Tree</h3>
+                    <p><strong>Choose based on priorities:</strong></p>
+                    
+                    <p style="margin-top:8px;"><strong>Priority: BUDGET (Lowest Cost)</strong></p>
+                    <ul>
+                        <li>→ Plain Galvanized Yero #26 gauge</li>
+                        <li>→ Skip insulation initially (add later)</li>
+                        <li>→ Painted finish (DIY painting)</li>
+                        <li>Cost: ₱180-250 per sqm installed</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Priority: DURABILITY (Longest Life)</strong></p>
+                    <ul>
+                        <li>→ Pre-painted Long Span #24 gauge</li>
+                        <li>→ Include insulation + ventilation</li>
+                        <li>→ Premium sealants and flashing</li>
+                        <li>Cost: ₱450-650 per sqm installed</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Priority: APPEARANCE (Best Look)</strong></p>
+                    <ul>
+                        <li>→ Clay or Concrete Tiles</li>
+                        <li>→ Requires reinforced structure</li>
+                        <li>→ Professional installation only</li>
+                        <li>Cost: ₱800-1,500 per sqm installed</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Priority: HEAT CONTROL (Coolest)</strong></p>
+                    <ul>
+                        <li>→ White or light-colored coating</li>
+                        <li>→ Radiant barrier insulation</li>
+                        <li>→ Ridge and soffit vents</li>
+                        <li>Savings: Up to ₱1,500/month electricity</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Common Mistakes Professionals Avoid</h3>
+                    <ul>
+                        <li><strong>❌ Mistake:</strong> Installing in wrong direction
+                            <br><strong>✅ Correct:</strong> Sheets lap away from prevailing wind</li>
+                        <li><strong>❌ Mistake:</strong> Nailing through valley center
+                            <br><strong>✅ Correct:</strong> Nail only at valley edges</li>
+                        <li><strong>❌ Mistake:</strong> Overtightening fasteners (crushes washer)
+                            <br><strong>✅ Correct:</strong> Snug but slight bounce remains</li>
+                        <li><strong>❌ Mistake:</strong> Painting over rust without prep
+                            <br><strong>✅ Correct:</strong> Remove rust completely first</li>
+                        <li><strong>❌ Mistake:</strong> Installing ridge cap before roof sheets
+                            <br><strong>✅ Correct:</strong> Ridge cap is always last step</li>
+                        <li><strong>❌ Mistake:</strong> Using same fasteners for all materials
+                            <br><strong>✅ Correct:</strong> Match fastener type to substrate</li>
+                        <li><strong>❌ Mistake:</strong> Sealing before testing for leaks
+                            <br><strong>✅ Correct:</strong> Water test, then seal after drying</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Professional Tool Organization System</h3>
+                    <p><strong>Efficiency through Organization:</strong></p>
+                    
+                    <p style="margin-top:8px;"><strong>Tool Belt Setup (For Roof Work):</strong></p>
+                    <ul>
+                        <li><strong>Left Side:</strong> Hammer, pry bar, utility knife</li>
+                        <li><strong>Right Side:</strong> Drill/driver, extra battery</li>
+                        <li><strong>Front Pouches:</strong> Screws, nails, pencil, tape measure</li>
+                        <li><strong>Back Loop:</strong> Chalk line, level</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Ground Station Setup:</strong></p>
+                    <ul>
+                        <li><strong>Cut Station:</strong> Sawhorses, tin snips, straightedge</li>
+                        <li><strong>Material Stack:</strong> Organized by size, protected from weather</li>
+                        <li><strong>Waste Bin:</strong> For cut scraps (recycle metal)</li>
+                        <li><strong>First Aid Kit:</strong> Always accessible, fully stocked</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Quality Inspection Points (Professional Standard)</h3>
+                    <p><strong>During Installation - Check Every 2 Hours:</strong></p>
+                    <ul>
+                        <li>✓ Sheet alignment (use string line reference)</li>
+                        <li>✓ Overlap consistency (measure at 3 points per sheet)</li>
+                        <li>✓ Fastener pattern (count per sheet)</li>
+                        <li>✓ Sealant application (no gaps or thin spots)</li>
+                        <li>✓ Walking path (stay on purlins)</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Final Inspection - Before Client Approval:</strong></p>
+                    <ul>
+                        <li>✓ Water test all valleys and seams (hose for 10 minutes each)</li>
+                        <li>✓ Visual from ground (any misaligned sheets visible?)</li>
+                        <li>✓ Interior check (no daylight through roof, no stains)</li>
+                        <li>✓ Fastener inspection (all sealed, none missing washers)</li>
+                        <li>✓ Gutter flow test (proper drainage, no overflow)</li>
+                        <li>✓ Clean site (all debris removed, materials stored)</li>
+                        <li>✓ Documentation (photos of all critical junctions)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Troubleshooting Section -->
+            <div id="troubleshoot" class="section">
+                <div class="card warning">
+                    <h3>Problem: Leak Only During Heavy Rain with Wind</h3>
+                    <p><strong>Diagnosis Process:</strong></p>
+                    <p><span class="step-number">1</span> Not a simple hole (would leak in light rain too)</p>
+                    <p><span class="step-number">2</span> Check overlap direction (wind blowing under sheets?)</p>
+                    <p><span class="step-number">3</span> Inspect sealant at side overlaps</p>
+                    <p><span class="step-number">4</span> Look for capillary action gaps</p>
+                    
+                    <p style="margin-top:12px;"><strong>Solutions (in order of complexity):</strong></p>
+                    <p><strong>Solution A:</strong> Apply sealant to side overlaps</p>
+                    <ul>
+                        <li>Cost: ₱200-500</li>
+                        <li>Time: 1-2 hours</li>
+                        <li>Success rate: 60%</li>
+                    </ul>
+                    
+                    <p><strong>Solution B:</strong> Install butyl tape under overlaps</p>
+                    <ul>
+                        <li>Cost: ₱800-1,500</li>
+                        <li>Time: 4-6 hours</li>
+                        <li>Success rate: 85%</li>
+                    </ul>
+                    
+                    <p><strong>Solution C:</strong> Re-install sheets in correct direction</p>
+                    <ul>
+                        <li>Cost: ₱5,000-15,000</li>
+                        <li>Time: 2-3 days</li>
+                        <li>Success rate: 100%</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Problem: Condensation vs. Actual Leak</h3>
+                    <p><strong>How to Tell the Difference:</strong></p>
+                    
+                    <p style="margin-top:8px;"><strong>Signs of CONDENSATION:</strong></p>
+                    <ul>
+                        <li>Water appears even when not raining</li>
+                        <li>More common in early morning</li>
+                        <li>Affects large areas uniformly</li>
+                        <li>Surface feels damp, not dripping wet</li>
+                        <li>Worse when cooking/bathing without ventilation</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Signs of ACTUAL LEAK:</strong></p>
+                    <ul>
+                        <li>Only occurs during/after rain</li>
+                        <li>Specific location, not uniform</li>
+                        <li>May have water stains/rings</li>
+                        <li>Dripping or flowing water</li>
+                        <li>Can trace path from ceiling to source</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Condensation Solutions:</strong></p>
+                    <p><span class="step-number">1</span> Install roof vents (2-4 vents minimum)</p>
+                    <p><span class="step-number">2</span> Add soffit vents for air intake</p>
+                    <p><span class="step-number">3</span> Install insulation with vapor barrier</p>
+                    <p><span class="step-number">4</span> Use exhaust fans when cooking</p>
+                    <div class="price-tag">Cost: ₱3,000-10,000</div>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Problem: Rust Spreading Despite Treatment</h3>
+                    <p><strong>Root Cause Analysis:</strong></p>
+                    
+                    <p><strong>Cause 1: Galvanic Corrosion (Different Metals Touching)</strong></p>
+                    <ul>
+                        <li>Example: Steel screws in aluminum sheets</li>
+                        <li>Example: Copper flashing touching galvanized yero</li>
+                        <li>Solution: Insert plastic washers between different metals</li>
+                        <li>Prevention: Use compatible fasteners always</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Cause 2: Coastal Environment (Salt Air)</strong></p>
+                    <ul>
+                        <li>Normal rust treatment insufficient</li>
+                        <li>Requires marine-grade coatings</li>
+                        <li>Solution: Zinc-rich primer + epoxy topcoat</li>
+                        <li>Maintenance: Wash with freshwater quarterly</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Cause 3: Poor Drainage (Standing Water)</strong></p>
+                    <ul>
+                        <li>Even treated rust returns if water sits</li>
+                        <li>Solution: Improve roof slope or add drainage</li>
+                        <li>Prevention: Never install flat metal roofs</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Cause 4: Coating Failure (Paint Not Adhering)</strong></p>
+                    <ul>
+                        <li>Painted over oil, grease, or moisture</li>
+                        <li>Solution: Strip all paint, clean thoroughly, re-prime</li>
+                        <li>Prevention: Proper surface prep (80% of paint success)</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Problem: Noise - Identifying and Fixing</h3>
+                    <p><strong>Noise Type 1: Popping/Cracking (Thermal Expansion)</strong></p>
+                    <ul>
+                        <li>Cause: Metal expanding/contracting with temperature</li>
+                        <li>Worse: Morning and evening (temp changes)</li>
+                        <li>Solution: Use slotted holes for fasteners (allows movement)</li>
+                        <li>Solution: Don't overtighten screws</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Noise Type 2: Rumbling (Wind Vibration)</strong></p>
+                    <ul>
+                        <li>Cause: Large unsupported spans, loose fasteners</li>
+                        <li>Worse: During windy conditions</li>
+                        <li>Solution: Add more purlins (reduce span to 3ft max)</li>
+                        <li>Solution: Install intermediate screws</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Noise Type 3: Drumming (Rain Impact)</strong></p>
+                    <ul>
+                        <li>Cause: Thin gauge metal + no insulation</li>
+                        <li>Worse: During heavy rain</li>
+                        <li>Solution: Install acoustic insulation underneath</li>
+                        <li>Solution: Add ceiling to create air gap</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Noise Type 4: Scraping/Rubbing</strong></p>
+                    <ul>
+                        <li>Cause: Sheets rubbing against each other or branches</li>
+                        <li>Worse: When windy</li>
+                        <li>Solution: Trim nearby tree branches</li>
+                        <li>Solution: Add rubber spacers between sheets</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Problem: Premature Failure (Under 5 Years)</h3>
+                    <p><strong>Investigation Checklist:</strong></p>
+                    
+                    <p style="margin-top:8px;"><strong>Check 1: Material Quality</strong></p>
+                    <ul>
+                        <li>Was it genuine branded material? (Not counterfeit)</li>
+                        <li>Correct gauge thickness? (Measure with micrometer)</li>
+                        <li>Proper galvanization? (Zinc coating thickness)</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Check 2: Installation Errors</strong></p>
+                    <ul>
+                        <li>Wrong fastener type used?</li>
+                        <li>Insufficient number of fasteners?</li>
+                        <li>Damaged sheets during installation?</li>
+                        <li>Poor sealing or no sealant?</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Check 3: Environmental Factors</strong></p>
+                    <ul>
+                        <li>Near industrial area? (Chemical exposure)</li>
+                        <li>Coastal location? (Salt corrosion)</li>
+                        <li>Heavy pollution? (Acid rain)</li>
+                        <li>Extreme heat exposure? (Paint degradation)</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Check 4: Maintenance Neglect</strong></p>
+                    <ul>
+                        <li>Gutters ever cleaned?</li>
+                        <li>Minor damage addressed promptly?</li>
+                        <li>Repainting done on schedule?</li>
+                        <li>Tree branches trimmed?</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Action Plan Based on Findings:</strong></p>
+                    <p>If material defect: File warranty claim</p>
+                    <p>If installation error: Contractor liable (if under warranty)</p>
+                    <p>If environmental: Upgrade to suitable material</p>
+                    <p>If neglect: Implement proper maintenance schedule</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Diagnostic: Water Stain Pattern Analysis</h3>
+                    <p><strong>Stain patterns tell the story:</strong></p>
+                    
+                    <p style="margin-top:8px;"><strong>Pattern A: Circular Ring Stains</strong></p>
+                    <ul>
+                        <li>Indicates: Slow, persistent leak</li>
+                        <li>Likely source: Penetration (vent, pipe) not sealed</li>
+                        <li>Look for: Flashing failure around objects</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Pattern B: Linear Stains Following Beams</strong></p>
+                    <ul>
+                        <li>Indicates: Water running along structural member</li>
+                        <li>Likely source: Leak is uphill from stain</li>
+                        <li>Look for: Screw holes, seam failures along beam path</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Pattern C: Large Area, Uniform Dampness</strong></p>
+                    <ul>
+                        <li>Indicates: Condensation, not leak</li>
+                        <li>Likely source: Poor ventilation</li>
+                        <li>Look for: Mold growth, musty smell</li>
+                    </ul>
+                    
+                    <p style="margin-top:8px;"><strong>Pattern D: Stains Only at Edges/Walls</strong></p>
+                    <ul>
+                        <li>Indicates: Flashing failure</li>
+                        <li>Likely source: Wall-roof junction not sealed</li>
+                        <li>Look for: Gaps between wall and roofing</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>When to Repair vs. When to Replace - Decision Matrix</h3>
+                    <p><strong>REPAIR if:</strong></p>
+                    <ul>
+                        <li>✓ Roof age less than 8 years</li>
+                        <li>✓ Damage less than 20% of total area</li>
+                        <li>✓ Structure (trusses/purlins) still sound</li>
+                        <li>✓ Repair cost under 40% of replacement cost</li>
+                        <li>✓ No plans to renovate in next 3 years</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>REPLACE if:</strong></p>
+                    <ul>
+                        <li>✓ Roof age over 12 years</li>
+                        <li>✓ Widespread rust (over 30% coverage)</li>
+                        <li>✓ Multiple repairs already done (4+)</li>
+                        <li>✓ Structural damage present</li>
+                        <li>✓ Repair cost over 60% of replacement</li>
+                        <li>✓ Planning major renovation anyway</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>EVALUATE FURTHER if in gray area (8-12 years old)</strong></p>
+                    <ul>
+                        <li>Get 3 professional opinions</li>
+                        <li>Consider long-term plans for property</li>
+                        <li>Factor in energy savings of new roof</li>
+                        <li>Check if repair includes warranty</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- DIY Guide Section -->
+            <div id="diy" class="section">
+                <div class="card tip">
+                    <h3>Paano Sukatin ang Bubong (Roof Measurement)</h3>
+                    <p><span class="step-number">1</span> Sukatin ang haba at lapad ng bahay</p>
+                    <p><span class="step-number">2</span> Multiply: Length x Width = Base Area</p>
+                    <p><span class="step-number">3</span> Alamin ang roof pitch (slope)</p>
+                    <p><span class="step-number">4</span> Multiply base area x pitch multiplier:</p>
+                    <ul>
+                        <li>Flat to 3/12 pitch: x 1.0</li>
+                        <li>4/12 pitch: x 1.06</li>
+                        <li>5/12 pitch: x 1.08</li>
+                        <li>6/12 pitch: x 1.12</li>
+                        <li>8/12 pitch: x 1.20</li>
+                    </ul>
+                    <p><span class="step-number">5</span> Dagdagan ng 10% para sa wastage</p>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Tamang Pag-overlap ng Yero</h3>
+                    <ul>
+                        <li><strong>Side overlap:</strong> 1 corrugation (mga 2 inches)</li>
+                        <li><strong>End overlap:</strong> 6 inches minimum</li>
+                        <li><strong>Low pitch roof:</strong> 8-12 inches overlap</li>
+                        <li><strong>Steep roof:</strong> 4-6 inches okay na</li>
+                        <li>Laging mag-start from bottom paakyat</li>
+                        <li>Overlap direction: Opposite ng wind direction</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Tamang Pagkabit ng Screws/Pako</h3>
+                    <ul>
+                        <li>I-place sa high points (ridges) ng yero</li>
+                        <li>Every 2 feet ang spacing</li>
+                        <li>3 screws per sheet width minimum</li>
+                        <li>1 inch from edge ng sheet</li>
+                        <li>Hindi masyadong tight - dapat may little give</li>
+                        <li>Laging gumamit ng rubber washer</li>
+                        <li>Check if perpendicular ang screws</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>DIY Roof Inspection Checklist</h3>
+                    <p><strong>Exterior Check (from ground):</strong></p>
+                    <ul>
+                        <li>✓ May missing o damaged shingles/yero?</li>
+                        <li>✓ Visible rust o discoloration?</li>
+                        <li>✓ Sagging areas sa roofline?</li>
+                        <li>✓ Damaged flashing sa chimney/vents?</li>
+                        <li>✓ Gutters may holes o separations?</li>
+                        <li>✓ Moss o algae growth?</li>
+                    </ul>
+                    <p><strong>Interior Check (sa attic):</strong></p>
+                    <ul>
+                        <li>✓ Water stains sa ceiling?</li>
+                        <li>✓ Daylight visible through cracks?</li>
+                        <li>✓ Musty odor o mold?</li>
+                        <li>✓ Sagging sa insulation?</li>
+                        <li>✓ Damaged o wet wood?</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Paano Mag-apply ng Roofing Sealant</h3>
+                    <p><span class="step-number">1</span> Clean the surface thoroughly</p>
+                    <p><span class="step-number">2</span> Make sure tuyo - no moisture</p>
+                    <p><span class="step-number">3</span> Cut nozzle ng sealant tube at 45 degrees</p>
+                    <p><span class="step-number">4</span> Apply steady pressure sa gun</p>
+                    <p><span class="step-number">5</span> Consistent bead along the seam</p>
+                    <p><span class="step-number">6</span> Smooth gamit ng wet finger o tool</p>
+                    <p><span class="step-number">7</span> Let cure 24-48 hours</p>
+                    <p><strong>Tip:</strong> Better mag-apply pag sunny weather (50-90°F)</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Step-by-Step: Complete Yero Sheet Replacement</h3>
+                    <p><strong>Preparation Phase:</strong></p>
+                    <p><span class="step-number">1</span> Take photos ng current installation (reference)</p>
+                    <p><span class="step-number">2</span> Count overlapping sheets to remove</p>
+                    <p><span class="step-number">3</span> Check weather forecast (need 6 hours dry time)</p>
+                    <p><span class="step-number">4</span> Prepare tarp for emergency cover</p>
+                    
+                    <p style="margin-top:12px;"><strong>Removal Phase:</strong></p>
+                    <p><span class="step-number">5</span> Start with topmost overlapping sheet</p>
+                    <p><span class="step-number">6</span> Lift edge carefully to expose fasteners</p>
+                    <p><span class="step-number">7</span> Remove screws with cordless drill (reverse)</p>
+                    <p><span class="step-number">8</span> For nails: use pry bar gently</p>
+                    <p><span class="step-number">9</span> Slide sheet out from under upper sheet</p>
+                    <p><span class="step-number">10</span> Inspect purlins for damage/rot</p>
+                    
+                    <p style="margin-top:12px;"><strong>Installation Phase:</strong></p>
+                    <p><span class="step-number">11</span> Measure exact length needed (add 6" overlap)</p>
+                    <p><span class="step-number">12</span> Cut new sheet if necessary</p>
+                    <p><span class="step-number">13</span> Apply sealant tape on purlin tops</p>
+                    <p><span class="step-number">14</span> Position sheet starting from eave</p>
+                    <p><span class="step-number">15</span> Align corrugations with adjacent sheets</p>
+                    <p><span class="step-number">16</span> Check alignment with chalk line</p>
+                    <p><span class="step-number">17</span> Pre-drill pilot holes on high ridges</p>
+                    <p><span class="step-number">18</span> Install screws with rubber washers</p>
+                    <p><span class="step-number">19</span> Don't overtighten - washer should compress slightly</p>
+                    <p><span class="step-number">20</span> Apply sealant on all screw heads</p>
+                    <p><span class="step-number">21</span> Check side overlap (minimum 1 corrugation)</p>
+                    <p><span class="step-number">22</span> Apply sealant along overlap seam</p>
+                    <p><span class="step-number">23</span> Test spray with water hose</p>
+                    <p><span class="step-number">24</span> Document completion with photos</p>
+                    <div class="price-tag">Time: 3-5 hours per sheet | Cost: ₱500-2,500</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Detailed Gutter Installation from Scratch</h3>
+                    <p><strong>Planning Phase:</strong></p>
+                    <p><span class="step-number">1</span> Measure total fascia length accurately</p>
+                    <p><span class="step-number">2</span> Determine downspout locations (max 40ft apart)</p>
+                    <p><span class="step-number">3</span> Calculate slope: 1/4" drop per 10 feet</p>
+                    <p><span class="step-number">4</span> Map out high and low points</p>
+                    <p><span class="step-number">5</span> List materials needed (gutters, hangers, downspouts, elbows)</p>
+                    
+                    <p style="margin-top:12px;"><strong>Marking Phase:</strong></p>
+                    <p><span class="step-number">6</span> Mark highest point at fascia (starting point)</p>
+                    <p><span class="step-number">7</span> Calculate total drop distance</p>
+                    <p><span class="step-number">8</span> Mark lowest point (downspout location)</p>
+                    <p><span class="step-number">9</span> Snap chalk line between points</p>
+                    <p><span class="step-number">10</span> Verify slope with level</p>
+                    
+                    <p style="margin-top:12px;"><strong>Hanger Installation:</strong></p>
+                    <p><span class="step-number">11</span> Mark hanger positions (every 24 inches)</p>
+                    <p><span class="step-number">12</span> Pre-drill holes in fascia</p>
+                    <p><span class="step-number">13</span> Install hangers following chalk line</p>
+                    <p><span class="step-number">14</span> Use stainless steel screws (won't rust)</p>
+                    <p><span class="step-number">15</span> Ensure all hangers aligned perfectly</p>
+                    
+                    <p style="margin-top:12px;"><strong>Gutter Assembly:</strong></p>
+                    <p><span class="step-number">16</span> Cut gutter sections to length</p>
+                    <p><span class="step-number">17</span> Attach end caps with pop rivets</p>
+                    <p><span class="step-number">18</span> Apply gutter sealant inside end caps</p>
+                    <p><span class="step-number">19</span> Connect sections using connectors</p>
+                    <p><span class="step-number">20</span> Seal all joints with gutter sealant</p>
+                    <p><span class="step-number">21</span> Let sealant cure per instructions</p>
+                    
+                    <p style="margin-top:12px;"><strong>Hanging Gutter:</strong></p>
+                    <p><span class="step-number">22</span> Lift gutter into hangers (2 person job)</p>
+                    <p><span class="step-number">23</span> Snap into hanger brackets</p>
+                    <p><span class="step-number">24</span> Verify slope again with level</p>
+                    <p><span class="step-number">25</span> Secure all connection points</p>
+                    
+                    <p style="margin-top:12px;"><strong>Downspout Installation:</strong></p>
+                    <p><span class="step-number">26</span> Cut hole in gutter for outlet</p>
+                    <p><span class="step-number">27</span> Install drop outlet with sealant</p>
+                    <p><span class="step-number">28</span> Attach elbow at outlet</p>
+                    <p><span class="step-number">29</span> Measure downspout length needed</p>
+                    <p><span class="step-number">30</span> Cut downspout sections</p>
+                    <p><span class="step-number">31</span> Connect with crimped ends</p>
+                    <p><span class="step-number">32</span> Attach to wall with straps (every 6 feet)</p>
+                    <p><span class="step-number">33</span> Add bottom elbow for splash block</p>
+                    <p><span class="step-number">34</span> Install splash block or extension</p>
+                    
+                    <p style="margin-top:12px;"><strong>Testing:</strong></p>
+                    <p><span class="step-number">35</span> Run water from highest point</p>
+                    <p><span class="step-number">36</span> Check for leaks at all joints</p>
+                    <p><span class="step-number">37</span> Verify water flows to downspout</p>
+                    <p><span class="step-number">38</span> Adjust if pooling occurs</p>
+                    <div class="price-tag">Time: 6-10 hours | Cost: ₱3,500-12,000</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Professional Roof Painting Procedure</h3>
+                    <p><strong>Surface Preparation (Most Important!):</strong></p>
+                    <p><span class="step-number">1</span> Choose dry season (January-March best)</p>
+                    <p><span class="step-number">2</span> Sweep entire roof surface clean</p>
+                    <p><span class="step-number">3</span> Power wash on low setting (1000 PSI max)</p>
+                    <p><span class="step-number">4</span> Let dry completely (2-3 days)</p>
+                    <p><span class="step-number">5</span> Wire brush all rust spots aggressively</p>
+                    <p><span class="step-number">6</span> Apply rust converter on affected areas</p>
+                    <p><span class="step-number">7</span> Wait 24 hours for converter to work</p>
+                    <p><span class="step-number">8</span> Sand rough areas smooth (220-grit)</p>
+                    <p><span class="step-number">9</span> Wipe with degreaser solution</p>
+                    <p><span class="step-number">10</span> Let surface dry again</p>
+                    
+                    <p style="margin-top:12px;"><strong>Priming Phase:</strong></p>
+                    <p><span class="step-number">11</span> Stir primer thoroughly (5 minutes)</p>
+                    <p><span class="step-number">12</span> Pour into paint tray</p>
+                    <p><span class="step-number">13</span> Start from highest point (ridge)</p>
+                    <p><span class="step-number">14</span> Use long-nap roller for corrugated surface</p>
+                    <p><span class="step-number">15</span> Apply in direction of water flow (downward)</p>
+                    <p><span class="step-number">16</span> Get into all corrugation valleys</p>
+                    <p><span class="step-number">17</span> Use brush for edges and overlaps</p>
+                    <p><span class="step-number">18</span> Apply even coat - no thick spots</p>
+                    <p><span class="step-number">19</span> Let dry per manufacturer specs (usually 4-6 hours)</p>
+                    <p><span class="step-number">20</span> Inspect coverage in good light</p>
+                    
+                    <p style="margin-top:12px;"><strong>First Paint Coat:</strong></p>
+                    <p><span class="step-number">21</span> Stir paint thoroughly</p>
+                    <p><span class="step-number">22</span> Apply same direction as primer</p>
+                    <p><span class="step-number">23</span> Maintain wet edge to avoid lap marks</p>
+                    <p><span class="step-number">24</span> Work in sections (complete one before moving)</p>
+                    <p><span class="step-number">25</span> Check coverage from ground level</p>
+                    <p><span class="step-number">26</span> Let dry 24 hours minimum</p>
+                    
+                    <p style="margin-top:12px;"><strong>Second Coat:</strong></p>
+                    <p><span class="step-number">27</span> Light sand if any drips exist (400-grit)</p>
+                    <p><span class="step-number">28</span> Wipe dust with tack cloth</p>
+                    <p><span class="step-number">29</span> Apply second coat same technique</p>
+                    <p><span class="step-number">30</span> Focus on thin spots from first coat</p>
+                    <p><span class="step-number">31</span> Let cure 48 hours before rain exposure</p>
+                    
+                    <p style="margin-top:12px;"><strong>Finishing Touches:</strong></p>
+                    <p><span class="step-number">32</span> Touch up screw heads individually</p>
+                    <p><span class="step-number">33</span> Paint ridge caps if applicable</p>
+                    <p><span class="step-number">34</span> Apply third coat on high-wear areas (optional)</p>
+                    <p><span class="step-number">35</span> Final inspection from all angles</p>
+                    <div class="price-tag">Time: 3-5 days | Cost: ₱8,000-25,000 (50 sqm roof)</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Complete Roof Deck/Substrate Installation</h3>
+                    <p><strong>For New Construction or Major Renovation:</strong></p>
+                    
+                    <p><strong>Truss/Frame Preparation:</strong></p>
+                    <p><span class="step-number">1</span> Verify truss spacing (standard: 24" on center)</p>
+                    <p><span class="step-number">2</span> Check all trusses for level alignment</p>
+                    <p><span class="step-number">3</span> Install temporary bracing to prevent racking</p>
+                    <p><span class="step-number">4</span> Mark truss locations on top plate</p>
+                    
+                    <p style="margin-top:12px;"><strong>Purlin Installation:</strong></p>
+                    <p><span class="step-number">5</span> Calculate purlin spacing based on yero span rating</p>
+                    <p><span class="step-number">6</span> Standard spacing: 2x3" purlins every 4 feet</p>
+                    <p><span class="step-number">7</span> Start from eave working toward ridge</p>
+                    <p><span class="step-number">8</span> Snap chalk lines across trusses</p>
+                    <p><span class="step-number">9</span> Cut purlins to length (overhang eave by 12")</p>
+                    <p><span class="step-number">10</span> Attach with 3" screws at each truss</p>
+                    <p><span class="step-number">11</span> Join purlin sections over truss center</p>
+                    <p><span class="step-number">12</span> Verify all purlins straight with string line</p>
+                    <p><span class="step-number">13</span> Install double purlin at ridge for extra support</p>
+                    
+                    <p style="margin-top:12px;"><strong>Fascia Installation:</strong></p>
+                    <p><span class="step-number">14</span> Cut fascia boards to length</p>
+                    <p><span class="step-number">15</span> Attach to rafter/truss tails</p>
+                    <p><span class="step-number">16</span> Keep top edge level for gutter mounting</p>
+                    <p><span class="step-number">17</span> Pre-drill to prevent splitting</p>
+                    <p><span class="step-number">18</span> Paint fascia before roofing (easier access)</p>
+                    
+                    <p style="margin-top:12px;"><strong>Drip Edge Installation:</strong></p>
+                    <p><span class="step-number">19</span> Install along all eaves first</p>
+                    <p><span class="step-number">20</span> Overlap sections by 2 inches</p>
+                    <p><span class="step-number">21</span> Extend 1/2" beyond fascia</p>
+                    <p><span class="step-number">22</span> Nail every 12 inches</p>
+                    <p><span class="step-number">23</span> Install on rake edges (gable ends)</p>
+                    <div class="price-tag">Time: 5-10 days | Cost: ₱25,000-80,000 (100 sqm)</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Homemade Rust Prevention Solution</h3>
+                    <p><strong>Materials:</strong></p>
+                    <ul>
+                        <li>White vinegar - 1 cup</li>
+                        <li>Baking soda - 2 tablespoons</li>
+                        <li>Water - 1 liter</li>
+                        <li>Spray bottle</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <p><span class="step-number">1</span> Mix all ingredients sa spray bottle</p>
+                    <p><span class="step-number">2</span> Spray sa slightly rusted areas</p>
+                    <p><span class="step-number">3</span> Let sit for 30 minutes</p>
+                    <p><span class="step-number">4</span> Scrub with wire brush</p>
+                    <p><span class="step-number">5</span> Rinse and apply rustproof paint</p>
+                    <p><strong>Note:</strong> For light rust only, not major corrosion</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Paano Gumawa ng Emergency Rain Patch</h3>
+                    <p><strong>Temporary solution hanggang maayos:</strong></p>
+                    <p><span class="step-number">1</span> Cut tarpaulin slightly larger than damaged area</p>
+                    <p><span class="step-number">2</span> Clean at dry the surface</p>
+                    <p><span class="step-number">3</span> Apply roofing cement sa edges</p>
+                    <p><span class="step-number">4</span> Press tarp firmly</p>
+                    <p><span class="step-number">5</span> Secure edges with roofing nails</p>
+                    <p><span class="step-number">6</span> Apply more cement over nails</p>
+                    <p><span class="step-number">7</span> Mag-hold ng 1-2 months if properly done</p>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Budget DIY Insulation Hacks</h3>
+                    <ul>
+                        <li><strong>Cardboard boxes:</strong> Flatten and staple under yero (temporary)</li>
+                        <li><strong>Bubble wrap:</strong> Double layer gives decent insulation</li>
+                        <li><strong>Aluminum foil:</strong> Reflects heat, tape to ceiling</li>
+                        <li><strong>Styrofoam sheets:</strong> Cut to fit between purlins</li>
+                        <li><strong>Egg cartons:</strong> Good sound dampening bonus</li>
+                        <li><strong>Old newspapers:</strong> Pack tightly in attic spaces</li>
+                    </ul>
+                    <p><strong>Important:</strong> Pang-emergency lang, proper insulation pa rin best</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Paano Gumawa ng Roof Walkway</h3>
+                    <p><strong>Para sa regular maintenance walang damage:</strong></p>
+                    <p><span class="step-number">1</span> Gumamit ng 2x6 wooden planks</p>
+                    <p><span class="step-number">2</span> Length dapat sakto sa dalawang purlin</p>
+                    <p><span class="step-number">3</span> I-pad ng old carpet or rubber sa ilalim</p>
+                    <p><span class="step-number">4</span> Secure with rope sa purlins (temporary)</p>
+                    <p><span class="step-number">5</span> Always step on walkway, never directly sa yero</p>
+                    <div class="price-tag">Cost: ₱500-1,200</div>
+                </div>
+                
+                <div class="card">
+                    <h3>DIY Rain Gutter Guard</h3>
+                    <p><strong>Para hindi ma-block ng dahon:</strong></p>
+                    <p><span class="step-number">1</span> Bumili ng wire mesh o gutter screen</p>
+                    <p><span class="step-number">2</span> Sukatin ang gutter length</p>
+                    <p><span class="step-number">3</span> Cut mesh 2 inches wider than gutter</p>
+                    <p><span class="step-number">4</span> Bend edges para fit snugly</p>
+                    <p><span class="step-number">5</span> Clip o screw sa gutter edges</p>
+                    <p><span class="step-number">6</span> Overlap sections by 1 inch</p>
+                    <div class="price-tag">Cost: ₱80-150 per meter</div>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Paano Ayusin ang Noisy Roof (Ingay sa Ulan)</h3>
+                    <p><strong>Causes at Solutions:</strong></p>
+                    <ul>
+                        <li><strong>Loose sheets:</strong> Tighten all screws/nails</li>
+                        <li><strong>No insulation:</strong> Install foam or fiberglass</li>
+                        <li><strong>Thin gauge yero:</strong> Add layer of soundproofing</li>
+                        <li><strong>Large attic space:</strong> Install ceiling para absorb sound</li>
+                        <li><strong>Vibrating metal:</strong> Apply rubber washers sa all fasteners</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Advanced: Paano Mag-install ng Skylight</h3>
+                    <p><span class="step-number">1</span> Mark location sa ceiling and roof</p>
+                    <p><span class="step-number">2</span> Cut opening sa ceiling (from inside)</p>
+                    <p><span class="step-number">3</span> Frame the opening with 2x4s</p>
+                    <p><span class="step-number">4</span> Cut roof opening matching the frame</p>
+                    <p><span class="step-number">5</span> Install skylight frame sa roof</p>
+                    <p><span class="step-number">6</span> Apply flashing around skylight</p>
+                    <p><span class="step-number">7</span> Seal thoroughly with roofing cement</p>
+                    <p><span class="step-number">8</span> Install skylight dome or glass</p>
+                    <p><span class="step-number">9</span> Create light shaft from roof to ceiling</p>
+                    <div class="price-tag">DIY: ₱8,000-15,000 | Professional: ₱20,000-40,000</div>
+                </div>
+            </div>
+            
+            <!-- Emergency Section -->
+            <div id="emergency" class="section">
+                <div class="card warning">
+                    <h3>Emergency: Nalalaglag ang Yero sa Bagyo</h3>
+                    <p><strong>Immediate Actions:</strong></p>
+                    <p><span class="step-number">1</span> SAFETY FIRST - Stay indoors kung malakas pa hangin</p>
+                    <p><span class="step-number">2</span> Document damage for insurance (photos)</p>
+                    <p><span class="step-number">3</span> Move valuable items away from affected area</p>
+                    <p><span class="step-number">4</span> Place buckets sa tumutulong lugar</p>
+                    <p><span class="step-number">5</span> Cover exposed area with tarp from inside</p>
+                    <p><span class="step-number">6</span> Call professional pag tumigil na hangin</p>
+                    <p><strong>DO NOT:</strong> Climb roof during or right after storm</p>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Emergency Leak Stop Techniques</h3>
+                    <p><strong>Method 1: Interior Temporary Fix</strong></p>
+                    <ul>
+                        <li>Locate exact leak spot from inside</li>
+                        <li>Push nail through hole (marker)</li>
+                        <li>Apply bucket underneath</li>
+                        <li>Seal with waterproof tape from inside temporarily</li>
+                    </ul>
+                    <p><strong>Method 2: Exterior Quick Patch</strong></p>
+                    <ul>
+                        <li>Clean area around leak</li>
+                        <li>Apply roofing cement liberally</li>
+                        <li>Press aluminum flashing over it</li>
+                        <li>Apply more cement on edges</li>
+                        <li>Weight down edges kung di pa tuyo</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Paghandaan: Pre-Typhoon Roof Checklist</h3>
+                    <p><strong>1 Week Before:</strong></p>
+                    <ul>
+                        <li>✓ I-trim ang overhanging tree branches</li>
+                        <li>✓ Clean gutters and downspouts</li>
+                        <li>✓ Check all loose sheets, i-secure</li>
+                        <li>✓ Inspect flashings and seal cracks</li>
+                        <li>✓ Tighten loose screws/nails</li>
+                    </ul>
+                    <p><strong>Day Before:</strong></p>
+                    <ul>
+                        <li>✓ Have tarp ready with ropes</li>
+                        <li>✓ Prepare emergency patch kit</li>
+                        <li>✓ Remove loose items from yard</li>
+                        <li>✓ Take before photos for insurance</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Emergency Repair Kit (Keep Ready)</h3>
+                    <p><strong>Must-Have Items:</strong></p>
+                    <ul>
+                        <li>✓ Heavy-duty tarpaulin (10x10 ft minimum)</li>
+                        <li>✓ Roofing cement (2 tubes)</li>
+                        <li>✓ Silicon sealant (2 tubes)</li>
+                        <li>✓ Duct tape (waterproof type)</li>
+                        <li>✓ Aluminum flashing sheets (2-3 pcs)</li>
+                        <li>✓ Roofing screws with washers (1 box)</li>
+                        <li>✓ Hammer and screwdriver</li>
+                        <li>✓ Wire brush</li>
+                        <li>✓ Rope or tie wire</li>
+                        <li>✓ Flashlight with batteries</li>
+                        <li>✓ Work gloves</li>
+                        <li>✓ Ladder stabilizer</li>
+                    </ul>
+                    <div class="price-tag">Total Kit Cost: ₱2,500-4,000</div>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Post-Storm Inspection Priority</h3>
+                    <p><strong>Safety First!</strong> Wait 24 hours after storm.</p>
+                    <p><span class="step-number">1</span> Check from ground using binoculars</p>
+                    <p><span class="step-number">2</span> Look for missing sheets or major damage</p>
+                    <p><span class="step-number">3</span> Check gutters for blockage</p>
+                    <p><span class="step-number">4</span> Inspect flashing and ridge caps</p>
+                    <p><span class="step-number">5</span> Document all damage (photos/video)</p>
+                    <p><span class="step-number">6</span> Only climb if SAFE and necessary</p>
+                    <p><span class="step-number">7</span> Call professional for major repairs</p>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Emergency Contacts</h3>
+                    <ul>
+                        <li><strong>NDRRMC Hotline:</strong> 911 (Metro Manila)</li>
+                        <li><strong>Pagasa Weather:</strong> (02) 8284-0800</li>
+                        <li><strong>Red Cross:</strong> 143</li>
+                        <li><strong>Local Barangay:</strong> Keep number handy</li>
+                        <li><strong>Insurance Company:</strong> Save on phone</li>
+                        <li><strong>Trusted Contractor:</strong> Emergency repair contact</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Insurance Claims Guide</h3>
+                    <p><strong>Document Everything:</strong></p>
+                    <p><span class="step-number">1</span> Take photos BEFORE any temporary repairs</p>
+                    <p><span class="step-number">2</span> Video ang extent ng damage</p>
+                    <p><span class="step-number">3</span> Keep all receipts for emergency repairs</p>
+                    <p><span class="step-number">4</span> Get written contractor estimates</p>
+                    <p><span class="step-number">5</span> File claim within 48-72 hours</p>
+                    <p><span class="step-number">6</span> Don't discard damaged materials until adjuster sees</p>
+                    <p><span class="step-number">7</span> Keep diary ng all communications</p>
+                    <p><strong>Tip:</strong> Mag-invest sa comprehensive home insurance</p>
+                </div>
+            </div>
+            
+            <!-- Maintenance Section -->
+            <div id="maintenance" class="section">
+                <div class="card">
+                    <h3>Monthly Maintenance Checklist</h3>
+                    <p><strong>Quick 15-minute inspection:</strong></p>
+                    <ul>
+                        <li>✓ Check for visible damage from ground</li>
+                        <li>✓ Look for water stains sa ceiling inside</li>
+                        <li>✓ Inspect gutters for debris</li>
+                        <li>✓ Check downspouts for proper drainage</li>
+                        <li>✓ Look for rust spots or discoloration</li>
+                        <li>✓ Verify no sagging or warping</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Quarterly Deep Maintenance (Every 3 Months)</h3>
+                    <p><span class="step-number">1</span> Clean gutters completely (remove all debris)</p>
+                    <p><span class="step-number">2</span> Flush downspouts with water hose</p>
+                    <p><span class="step-number">3</span> Trim overhanging tree branches (3-6 ft clearance)</p>
+                    <p><span class="step-number">4</span> Inspect and clean roof surface (sweep off leaves)</p>
+                    <p><span class="step-number">5</span> Check all sealants for cracks</p>
+                    <p><span class="step-number">6</span> Tighten any loose screws/nails</p>
+                    <p><span class="step-number">7</span> Spray anti-moss treatment if needed</p>
+                    <div class="price-tag">DIY: ₱200-500 | Hire Help: ₱1,500-3,000</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Annual Professional Inspection</h3>
+                    <p><strong>Best time: January-February (dry season)</strong></p>
+                    <p><strong>What professionals check:</strong></p>
+                    <ul>
+                        <li>Structural integrity ng truss at purlins</li>
+                        <li>All fasteners condition (rust, looseness)</li>
+                        <li>Flashing around chimneys, vents, valleys</li>
+                        <li>Attic ventilation efficiency</li>
+                        <li>Insulation condition</li>
+                        <li>Signs of pest infestation (termites, rats)</li>
+                        <li>Overall remaining lifespan estimate</li>
+                    </ul>
+                    <div class="price-tag">Cost: ₱2,000-5,000</div>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Gutter Maintenance Schedule</h3>
+                    <ul>
+                        <li><strong>Before Rainy Season (April-May):</strong> Deep clean, repair holes</li>
+                        <li><strong>Mid Rainy Season (July-August):</strong> Quick clear ng blockage</li>
+                        <li><strong>After Typhoon:</strong> Emergency clear, check for damage</li>
+                        <li><strong>Dry Season (January):</strong> Annual maintenance, repainting</li>
+                    </ul>
+                    <p><strong>Pro Tip:</strong> Install gutter guards para less maintenance</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Painting Maintenance Schedule</h3>
+                    <p><strong>Galvanized Yero:</strong></p>
+                    <ul>
+                        <li>First coat: After 6 months to 1 year</li>
+                        <li>Repaint: Every 3-5 years</li>
+                        <li>Touch up: Annually sa areas with rust</li>
+                    </ul>
+                    <p><strong>Pre-painted Long Span:</strong></p>
+                    <ul>
+                        <li>Repaint: Every 5-7 years</li>
+                        <li>Touch up: When paint chips or scratches</li>
+                    </ul>
+                    <p><strong>Best Time:</strong> January-February (dry, not too hot)</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Cleaning Procedures per Roof Type</h3>
+                    <p><strong>Metal Roofing (Yero/Long Span):</strong></p>
+                    <ul>
+                        <li>Sweep off loose debris with soft broom</li>
+                        <li>Mix mild detergent with water</li>
+                        <li>Scrub gently with soft brush</li>
+                        <li>Rinse thoroughly from top to bottom</li>
+                        <li>Frequency: Every 6 months</li>
+                    </ul>
+                    <p><strong>Tile Roofing:</strong></p>
+                    <ul>
+                        <li>Remove debris from valleys first</li>
+                        <li>Power wash on low setting (1,200 PSI max)</li>
+                        <li>Work from top downward</li>
+                        <li>Check for cracked tiles while cleaning</li>
+                        <li>Frequency: Annually</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Preventive Maintenance Tips</h3>
+                    <ul>
+                        <li><strong>Anti-Rust Spray:</strong> Apply annually sa screw heads (₱150-300)</li>
+                        <li><strong>Silicone Refresh:</strong> Re-seal joints every 2 years</li>
+                        <li><strong>Ventilation Check:</strong> Ensure vents not blocked (monthly)</li>
+                        <li><strong>Tree Management:</strong> Keep 6ft clearance minimum</li>
+                        <li><strong>Pest Control:</strong> Quarterly spray for termites/rats</li>
+                        <li><strong>Documentation:</strong> Keep log ng all maintenance done</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Warning Signs na Kailangan Immediate Action</h3>
+                    <ul>
+                        <li>🚨 Water stains sa ceiling (active leak)</li>
+                        <li>🚨 Visible sagging sa roofline (structural issue)</li>
+                        <li>🚨 Multiple missing sheets after storm</li>
+                        <li>🚨 Excessive rust covering 30%+ area</li>
+                        <li>🚨 Daylight visible through roof sa attic</li>
+                        <li>🚨 Wet insulation or wood (moisture damage)</li>
+                        <li>🚨 Granules in gutter (shingle deterioration)</li>
+                        <li>🚨 Strong musty smell sa attic (mold)</li>
+                    </ul>
+                    <p><strong>Action:</strong> Call professional within 24-48 hours</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Maintenance Tools Investment</h3>
+                    <p><strong>Essential Kit (₱3,000-5,000):</strong></p>
+                    <ul>
+                        <li>Extension ladder (20-24 ft) - ₱2,000-3,500</li>
+                        <li>Roof rake - ₱300-600</li>
+                        <li>Leaf blower - ₱1,500-3,000</li>
+                        <li>Garden hose with spray nozzle - ₱400-800</li>
+                        <li>Safety harness - ₱800-1,500</li>
+                    </ul>
+                    <p><strong>Advanced Kit (₱8,000-12,000):</strong></p>
+                    <ul>
+                        <li>Pressure washer - ₱4,000-8,000</li>
+                        <li>Cordless drill set - ₱2,500-5,000</li>
+                        <li>Roof anchor system - ₱1,500-2,500</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Maintenance Log Template</h3>
+                    <p><strong>Keep record of:</strong></p>
+                    <ul>
+                        <li>Date of inspection/maintenance</li>
+                        <li>Issues found and actions taken</li>
+                        <li>Materials used with receipts</li>
+                        <li>Cost of repairs</li>
+                        <li>Before/after photos</li>
+                        <li>Professional recommendations</li>
+                        <li>Next scheduled maintenance date</li>
+                    </ul>
+                    <p><strong>Why:</strong> Helpful for warranty, insurance, resale value</p>
+                </div>
+            </div>
+            
+            <!-- Calculator Section -->
+            <div id="calculator" class="section">
+                <div class="card">
+                    <h3>Roof Area Calculator</h3>
+                    <p><strong>Enter measurements:</strong></p>
+                    <label style="display:block; margin:8px 0;">Haba (Length in meters):</label>
+                    <input type="number" id="length" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                    
+                    <label style="display:block; margin:8px 0;">Lapad (Width in meters):</label>
+                    <input type="number" id="width" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                    
+                    <label style="display:block; margin:8px 0;">Roof Pitch/Slope:</label>
+                    <select id="pitch" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                        <option value="1.00">Flat (0/12)</option>
+                        <option value="1.03">Low (3/12)</option>
+                        <option value="1.06">Medium (4/12)</option>
+                        <option value="1.08" selected>Standard (5/12)</option>
+                        <option value="1.12">Steep (6/12)</option>
+                        <option value="1.20">Very Steep (8/12)</option>
+                    </select>
+                    
+                    <button onclick="calculateRoof()" style="width:100%; padding:12px; background:#8B4513; color:white; border:none; border-radius:4px; font-size:1em; cursor:pointer; margin-top:8px;">Calculate</button>
+                    
+                    <div id="roofResult" style="margin-top:16px; padding:12px; background:#f0f0f0; border-radius:4px; display:none;">
+                        <p style="margin:4px 0;"><strong>Total Roof Area:</strong> <span id="totalArea"></span> sqm</p>
+                        <p style="margin:4px 0;"><strong>With 10% Wastage:</strong> <span id="wastageArea"></span> sqm</p>
+                        <p style="margin:4px 0; color:#8B4513;"><strong>Estimated Yero Needed (8ft):</strong> <span id="sheets"></span> sheets</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Material Cost Estimator</h3>
+                    <p><strong>Bilang ng Yero/Sheets:</strong></p>
+                    <input type="number" id="numSheets" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;" value="10">
+                    
+                    <label style="display:block; margin:8px 0;">Roof Type:</label>
+                    <select id="roofType" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                        <option value="250">Plain Yero (₱250/sheet avg)</option>
+                        <option value="450">Long Span (₱450/sheet avg)</option>
+                        <option value="60">Tile (₱60/piece avg)</option>
+                        <option value="550">Polycarbonate (₱550/sheet avg)</option>
+                    </select>
+                    
+                    <button onclick="calculateMaterials()" style="width:100%; padding:12px; background:#8B4513; color:white; border:none; border-radius:4px; font-size:1em; cursor:pointer; margin-top:8px;">Calculate Materials</button>
+                    
+                    <div id="materialResult" style="margin-top:16px; padding:12px; background:#f0f0f0; border-radius:4px; display:none;">
+                        <p style="margin:4px 0;"><strong>Roofing Sheets:</strong> ₱<span id="sheetCost"></span></p>
+                        <p style="margin:4px 0;"><strong>Screws (3 per sheet):</strong> ₱<span id="screwCost"></span></p>
+                        <p style="margin:4px 0;"><strong>Sealant (1 tube per 10 sheets):</strong> ₱<span id="sealantCost"></span></p>
+                        <p style="margin:4px 0;"><strong>Ridge Roll (estimate):</strong> ₱<span id="ridgeCost"></span></p>
+                        <p style="margin:4px 0; padding-top:8px; border-top:2px solid #8B4513; font-size:1.1em; color:#8B4513;"><strong>TOTAL ESTIMATE:</strong> ₱<span id="totalCost"></span></p>
+                        <p style="margin:8px 0; font-size:0.85em; color:#666;">*Prices may vary. Add 15-20% for labor if hiring.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Paint Coverage Calculator</h3>
+                    <p><strong>Roof Area (sqm):</strong></p>
+                    <input type="number" id="paintArea" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                    
+                    <label style="display:block; margin:8px 0;">Number of Coats:</label>
+                    <select id="coats" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                        <option value="1">1 Coat</option>
+                        <option value="2" selected>2 Coats (Recommended)</option>
+                        <option value="3">3 Coats (Maximum Protection)</option>
+                    </select>
+                    
+                    <button onclick="calculatePaint()" style="width:100%; padding:12px; background:#8B4513; color:white; border:none; border-radius:4px; font-size:1em; cursor:pointer; margin-top:8px;">Calculate Paint</button>
+                    
+                    <div id="paintResult" style="margin-top:16px; padding:12px; background:#f0f0f0; border-radius:4px; display:none;">
+                        <p style="margin:4px 0;"><strong>Primer Needed:</strong> <span id="primerGal"></span> gallons</p>
+                        <p style="margin:4px 0;"><strong>Paint Needed:</strong> <span id="paintGal"></span> gallons</p>
+                        <p style="margin:4px 0; padding-top:8px; border-top:2px solid #8B4513;"><strong>Estimated Cost:</strong></p>
+                        <p style="margin:4px 0;">Primer: ₱<span id="primerCost"></span></p>
+                        <p style="margin:4px 0;">Paint: ₱<span id="paintCost"></span></p>
+                        <p style="margin:4px 0; font-size:1.1em; color:#8B4513;"><strong>TOTAL:</strong> ₱<span id="totalPaintCost"></span></p>
+                    </div>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Quick Reference: Common Sizes</h3>
+                    <p><strong>Typical Filipino House Sizes:</strong></p>
+                    <ul>
+                        <li><strong>Small (40 sqm floor):</strong> ~50 sqm roof</li>
+                        <li><strong>Medium (80 sqm floor):</strong> ~95 sqm roof</li>
+                        <li><strong>Large (150 sqm floor):</strong> ~180 sqm roof</li>
+                    </ul>
+                    <p style="margin-top:12px;"><strong>Standard Yero Coverage:</strong></p>
+                    <ul>
+                        <li>6ft sheet: 0.74 sqm effective</li>
+                        <li>8ft sheet: 0.99 sqm effective</li>
+                        <li>10ft sheet: 1.24 sqm effective</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>ROI Calculator: Repair vs Replace</h3>
+                    <p><strong>Current Roof Age (years):</strong></p>
+                    <input type="number" id="roofAge" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                    
+                    <label style="display:block; margin:8px 0;">Repair Cost Estimate (₱):</label>
+                    <input type="number" id="repairCost" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                    
+                    <label style="display:block; margin:8px 0;">New Roof Cost Estimate (₱):</label>
+                    <input type="number" id="replaceCost" style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:12px;">
+                    
+                    <button onclick="calculateROI()" style="width:100%; padding:12px; background:#8B4513; color:white; border:none; border-radius:4px; font-size:1em; cursor:pointer; margin-top:8px;">Calculate ROI</button>
+                    
+                    <div id="roiResult" style="margin-top:16px; padding:12px; background:#f0f0f0; border-radius:4px; display:none;">
+                        <p id="roiRecommendation" style="font-size:1.1em; font-weight:600; color:#8B4513; margin-bottom:8px;"></p>
+                        <p id="roiDetails" style="font-size:0.9em; color:#666;"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Techniques Section -->
+            <div id="techniques" class="section">
+                <div class="card">
+                    <h3>Tamang Paraan ng Pag-akyat sa Bubong</h3>
+                    <p><strong>Step-by-Step Safety Procedure:</strong></p>
+                    <p><span class="step-number">1</span> <strong>Check Weather:</strong> Never climb pag umuulan, windy, o mainit na sobra</p>
+                    <p><span class="step-number">2</span> <strong>Inspect Ladder:</strong> Check stability, no cracks, rubber feet intact</p>
+                    <p><span class="step-number">3</span> <strong>Position Ladder:</strong> 1 foot away from wall for every 4 feet high</p>
+                    <p><span class="step-number">4</span> <strong>Secure Base:</strong> Have someone hold ladder o i-tie sa secure object</p>
+                    <p><span class="step-number">5</span> <strong>3-Point Contact:</strong> Always 2 hands + 1 foot or 2 feet + 1 hand on ladder</p>
+                    <p><span class="step-number">6</span> <strong>Proper Footwear:</strong> Rubber-soled shoes with good grip</p>
+                    <p><span class="step-number">7</span> <strong>Walk on Purlins:</strong> Step on structural supports, never sa hollow parts</p>
+                    <p><span class="step-number">8</span> <strong>Use Harness:</strong> Attach to anchor point if working extended time</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Professional Cutting Technique para sa Yero</h3>
+                    <p><strong>Method 1: Tin Snips (Hand Tool)</strong></p>
+                    <p><span class="step-number">1</span> Mark cutting line with permanent marker</p>
+                    <p><span class="step-number">2</span> Clamp yero securely sa work table</p>
+                    <p><span class="step-number">3</span> Start cut from edge, not middle</p>
+                    <p><span class="step-number">4</span> Cut in smooth, continuous strokes</p>
+                    <p><span class="step-number">5</span> Use left-cut snips for left curves, right for right</p>
+                    <p><span class="step-number">6</span> File edges smooth to prevent cuts</p>
+                    
+                    <p style="margin-top:12px;"><strong>Method 2: Angle Grinder (Power Tool)</strong></p>
+                    <p><span class="step-number">1</span> Use metal cutting disc (1mm thin)</p>
+                    <p><span class="step-number">2</span> Wear safety goggles and gloves</p>
+                    <p><span class="step-number">3</span> Secure sheet to prevent vibration</p>
+                    <p><span class="step-number">4</span> Cut slowly with steady pressure</p>
+                    <p><span class="step-number">5</span> Let tool do the work, don't force</p>
+                    <p><span class="step-number">6</span> Keep fire extinguisher nearby (sparks)</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Expert Sealing Techniques</h3>
+                    <p><strong>Technique 1: Butyl Tape Method</strong></p>
+                    <ul>
+                        <li>Clean surface with degreaser</li>
+                        <li>Apply butyl tape along seam</li>
+                        <li>Press firmly with roller</li>
+                        <li>Best for: Sheet overlaps, flashing edges</li>
+                        <li>Lasts: 10-15 years</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Technique 2: Roofing Cement Method</strong></p>
+                    <ul>
+                        <li>Trowel-grade cement for larger areas</li>
+                        <li>Apply 1/8 inch thick minimum</li>
+                        <li>Feather edges para smooth transition</li>
+                        <li>Best for: Patches, valley sealing</li>
+                        <li>Cure time: 24-48 hours</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Technique 3: Silicone Sealant Method</strong></p>
+                    <ul>
+                        <li>Use high-quality roofing-grade silicone</li>
+                        <li>45-degree cut on nozzle tip</li>
+                        <li>Consistent bead application</li>
+                        <li>Smooth with wet finger immediately</li>
+                        <li>Best for: Screw heads, small gaps</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Water Pressure Testing Method</h3>
+                    <p><strong>Find exact leak location:</strong></p>
+                    <p><span class="step-number">1</span> Wait for dry weather (2-3 days no rain)</p>
+                    <p><span class="step-number">2</span> One person sa loob with flashlight</p>
+                    <p><span class="step-number">3</span> One person sa taas with garden hose</p>
+                    <p><span class="step-number">4</span> Start hosing from bottom, work upward</p>
+                    <p><span class="step-number">5</span> Hose one section for 5-10 minutes</p>
+                    <p><span class="step-number">6</span> Person inside marks exact leak spot</p>
+                    <p><span class="step-number">7</span> Person outside marks corresponding roof spot</p>
+                    <p><span class="step-number">8</span> Document with photos for repair</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Proper Nailing Patterns</h3>
+                    <p><strong>Pattern 1: Standard Yero (Residential)</strong></p>
+                    <ul>
+                        <li>First row: Every other corrugation (24" spacing)</li>
+                        <li>Middle sections: Every 3rd corrugation (36" spacing)</li>
+                        <li>Last row: Every other corrugation (24" spacing)</li>
+                        <li>Edges: 6" from edge, 12" apart</li>
+                        <li>Total: ~20 fasteners per 8ft sheet</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Pattern 2: High-Wind Area (Coastal)</strong></p>
+                    <ul>
+                        <li>Every corrugation at edges (12" spacing)</li>
+                        <li>Every 2nd corrugation at middle (24" spacing)</li>
+                        <li>Add extra row at 1/3 and 2/3 points</li>
+                        <li>Total: ~35 fasteners per 8ft sheet</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Rust Treatment Methods Comparison</h3>
+                    <p><strong>Method A: Wire Brush + Converter (Budget)</strong></p>
+                    <ul>
+                        <li>Cost: ₱300-600</li>
+                        <li>Time: 2-3 hours</li>
+                        <li>Effectiveness: 70% (light rust only)</li>
+                        <li>Duration: 1-2 years protection</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Method B: Sandblasting + Primer (Professional)</strong></p>
+                    <ul>
+                        <li>Cost: ₱2,000-5,000</li>
+                        <li>Time: 4-6 hours</li>
+                        <li>Effectiveness: 95% (deep rust removal)</li>
+                        <li>Duration: 5-7 years protection</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Method C: Chemical Dip (Maximum)</strong></p>
+                    <ul>
+                        <li>Cost: ₱5,000-10,000</li>
+                        <li>Time: 1-2 days</li>
+                        <li>Effectiveness: 99% (complete restoration)</li>
+                        <li>Duration: 10+ years protection</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Flashing Installation Techniques</h3>
+                    <p><strong>Step Flashing (for Walls/Chimneys):</strong></p>
+                    <p><span class="step-number">1</span> Cut L-shaped pieces (6"x6" each)</p>
+                    <p><span class="step-number">2</span> Install one piece per row of yero</p>
+                    <p><span class="step-number">3</span> Each piece overlaps previous by 3"</p>
+                    <p><span class="step-number">4</span> Bend to match roof angle exactly</p>
+                    <p><span class="step-number">5</span> Nail to wall side only, not roof</p>
+                    <p><span class="step-number">6</span> Seal with compatible sealant</p>
+                    
+                    <p style="margin-top:12px;"><strong>Counter Flashing (Secondary Protection):</strong></p>
+                    <p><span class="step-number">1</span> Install after step flashing</p>
+                    <p><span class="step-number">2</span> Overlaps step flashing by 4"</p>
+                    <p><span class="step-number">3</span> Embed top edge into mortar joint</p>
+                    <p><span class="step-number">4</span> Seal with masonry caulk</p>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Pro Time-Saving Techniques</h3>
+                    <ul>
+                        <li><strong>Pre-drill Pilot Holes:</strong> Prevents splitting, faster installation (save 30% time)</li>
+                        <li><strong>Batch Cut Sheets:</strong> Measure all, cut all at once (save 40% time)</li>
+                        <li><strong>Magnetic Screw Holder:</strong> One-hand operation, no dropping (save 25% time)</li>
+                        <li><strong>Rolling Scaffold:</strong> Move without climbing down (save 50% time)</li>
+                        <li><strong>Pneumatic Nailer:</strong> 10x faster than hammer (expensive but worth it)</li>
+                        <li><strong>Chalk Line Setup:</strong> Mark all rows before starting (better alignment)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Advanced Section -->
+            <div id="advanced" class="section">
+                <div class="card">
+                    <h3>Complex Roof Geometry: Hip Roof Installation</h3>
+                    <p><strong>Understanding Hip Roof:</strong></p>
+                    <ul>
+                        <li>All sides slope downward (no gable ends)</li>
+                        <li>More complex than standard gable</li>
+                        <li>Better wind resistance</li>
+                        <li>Requires precise angle cutting</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Installation Steps:</strong></p>
+                    <p><span class="step-number">1</span> Start from bottom corners (eaves)</p>
+                    <p><span class="step-number">2</span> Work toward ridge and hips simultaneously</p>
+                    <p><span class="step-number">3</span> Cut compound angles for hip lines (45° + slope angle)</p>
+                    <p><span class="step-number">4</span> Install hip cap last, working from bottom up</p>
+                    <p><span class="step-number">5</span> Use hip starter at bottom of each hip</p>
+                    <p><span class="step-number">6</span> Overlap hip caps by 6" minimum</p>
+                    <p><span class="step-number">7</span> Seal all hip intersections thoroughly</p>
+                    <div class="price-tag">Complexity: Expert Level | Time: 3-5 days</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Advanced: Solar Panel Integration</h3>
+                    <p><strong>Preparation Phase:</strong></p>
+                    <p><span class="step-number">1</span> Structural assessment (roof can handle 15-20kg/sqm)</p>
+                    <p><span class="step-number">2</span> Orient panels: South facing optimal sa Pinas</p>
+                    <p><span class="step-number">3</span> Calculate spacing for airflow (6" minimum)</p>
+                    <p><span class="step-number">4</span> Plan wiring route to inverter</p>
+                    
+                    <p style="margin-top:12px;"><strong>Mounting Installation:</strong></p>
+                    <p><span class="step-number">5</span> Install roof anchors at purlin locations</p>
+                    <p><span class="step-number">6</span> Use proper flashing for each penetration</p>
+                    <p><span class="step-number">7</span> Apply roofing cement around all anchors</p>
+                    <p><span class="step-number">8</span> Attach aluminum rails to anchors</p>
+                    <p><span class="step-number">9</span> Level rails precisely (use laser level)</p>
+                    <p><span class="step-number">10</span> Mount solar panels to rails</p>
+                    <p><span class="step-number">11</span> Ground entire system properly</p>
+                    <p><span class="step-number">12</span> Final waterproofing inspection</p>
+                    <div class="price-tag">DIY: ₱45,000-80,000 | Professional: ₱80,000-150,000</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Green Roof Installation (Roof Garden)</h3>
+                    <p><strong>Pre-requisites:</strong></p>
+                    <ul>
+                        <li>Flat or low-slope roof only (max 15°)</li>
+                        <li>Strong structural support (100kg/sqm capacity)</li>
+                        <li>Proper waterproofing membrane</li>
+                        <li>Good drainage system</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Layer-by-Layer Installation:</strong></p>
+                    <p><span class="step-number">1</span> <strong>Waterproof Layer:</strong> EPDM rubber or PVC membrane</p>
+                    <p><span class="step-number">2</span> <strong>Root Barrier:</strong> Prevents plant damage to waterproofing</p>
+                    <p><span class="step-number">3</span> <strong>Drainage Layer:</strong> Gravel or modular drainage mat</p>
+                    <p><span class="step-number">4</span> <strong>Filter Fabric:</strong> Prevents soil from clogging drainage</p>
+                    <p><span class="step-number">5</span> <strong>Growing Medium:</strong> Lightweight soil mix (8-15cm deep)</p>
+                    <p><span class="step-number">6</span> <strong>Plant Selection:</strong> Succulents, native grasses (low maintenance)</p>
+                    <p><span class="step-number">7</span> <strong>Irrigation System:</strong> Drip system for water efficiency</p>
+                    
+                    <p style="margin-top:12px;"><strong>Benefits:</strong> -5°C cooling, rainwater retention, 20-year membrane protection</p>
+                    <div class="price-tag">Cost: ₱1,500-3,500 per sqm</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Advanced Weatherproofing: Ice & Water Shield</h3>
+                    <p><strong>Application Areas (Priority Order):</strong></p>
+                    <p><span class="step-number">1</span> <strong>Valleys:</strong> 36" wide centered on valley</p>
+                    <p><span class="step-number">2</span> <strong>Eaves:</strong> 24" up from edge</p>
+                    <p><span class="step-number">3</span> <strong>Penetrations:</strong> 12" around vents/pipes</p>
+                    <p><span class="step-number">4</span> <strong>Chimneys:</strong> 8" overlap on all sides</p>
+                    <p><span class="step-number">5</span> <strong>Skylights:</strong> Full perimeter coverage</p>
+                    
+                    <p style="margin-top:12px;"><strong>Installation Technique:</strong></p>
+                    <ul>
+                        <li>Temperature: Apply between 4°C-38°C</li>
+                        <li>Remove release film gradually while applying</li>
+                        <li>Roll firmly with hand roller (no air bubbles)</li>
+                        <li>Overlap seams by 6" minimum</li>
+                        <li>Never stretch material during application</li>
+                    </ul>
+                    <div class="price-tag">Cost: ₱300-600 per linear meter</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Professional Pitch/Slope Adjustment</h3>
+                    <p><strong>When to Adjust Slope:</strong></p>
+                    <ul>
+                        <li>Poor drainage (water pooling)</li>
+                        <li>Frequent leaks at low points</li>
+                        <li>Adding second story</li>
+                        <li>Converting flat to pitched roof</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Adjustment Methods:</strong></p>
+                    <p><strong>Method 1: Purlin Shimming (Minor Adjustment)</strong></p>
+                    <p><span class="step-number">1</span> Calculate shim thickness needed</p>
+                    <p><span class="step-number">2</span> Cut tapered wood shims</p>
+                    <p><span class="step-number">3</span> Install progressively under purlins</p>
+                    <p><span class="step-number">4</span> Re-attach roofing over new slope</p>
+                    <div class="price-tag">Cost: ₱8,000-25,000</div>
+                    
+                    <p style="margin-top:12px;"><strong>Method 2: Truss Modification (Major Change)</strong></p>
+                    <p><span class="step-number">1</span> Remove existing roofing completely</p>
+                    <p><span class="step-number">2</span> Install new taller trusses or raise existing</p>
+                    <p><span class="step-number">3</span> Add new purlins at correct spacing</p>
+                    <p><span class="step-number">4</span> Install new roofing system</p>
+                    <div class="price-tag">Cost: ₱50,000-200,000 (Requires engineer)</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Lightning Protection System Integration</h3>
+                    <p><strong>System Components:</strong></p>
+                    <ul>
+                        <li><strong>Air Terminals (Rods):</strong> Highest points, 20-30ft spacing</li>
+                        <li><strong>Main Conductor:</strong> Copper cable connecting all rods</li>
+                        <li><strong>Down Conductors:</strong> Routes to ground (2 minimum)</li>
+                        <li><strong>Ground Rods:</strong> 8-10ft deep earth connection</li>
+                        <li><strong>Bonding:</strong> Connects metal roof components</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Installation Procedure:</strong></p>
+                    <p><span class="step-number">1</span> Survey roof for highest points</p>
+                    <p><span class="step-number">2</span> Install air terminals at peaks/corners</p>
+                    <p><span class="step-number">3</span> Run main conductor connecting all terminals</p>
+                    <p><span class="step-number">4</span> Route down conductors on opposite corners</p>
+                    <p><span class="step-number">5</span> Install ground rods in moist soil</p>
+                    <p><span class="step-number">6</span> Connect all metal components (AC units, gutters)</p>
+                    <p><span class="step-number">7</span> Test resistance (should be <10 ohms)</p>
+                    <div class="price-tag">Cost: ₱25,000-60,000 | Required: Licensed Installer</div>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Advanced Troubleshooting Guide</h3>
+                    <p><strong>Problem: Leak but No Visible Damage</strong></p>
+                    <ul>
+                        <li>Check: Condensation from poor ventilation</li>
+                        <li>Check: Capillary action under overlaps</li>
+                        <li>Check: Wind-driven rain through vents</li>
+                        <li>Solution: Thermal imaging camera to find exact path</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Problem: Excessive Noise in Rain/Wind</strong></p>
+                    <ul>
+                        <li>Cause: Inadequate fasteners (vibration)</li>
+                        <li>Cause: Large unsupported spans</li>
+                        <li>Solution: Add more purlins (max 4ft spacing)</li>
+                        <li>Solution: Install sound-deadening pads under screws</li>
+                    </ul>
+                    
+                    <p style="margin-top:12px;"><strong>Problem: Rapid Rust Despite Treatment</strong></p>
+                    <ul>
+                        <li>Cause: Dissimilar metal contact (galvanic corrosion)</li>
+                        <li>Cause: Salt air (coastal areas)</li>
+                        <li>Solution: Use plastic washers to separate metals</li>
+                        <li>Solution: Apply sacrificial zinc coating</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Mga Problema Section -->
+            <div id="problems" class="section">
+                <div class="card warning">
+                    <h3>Tumutulo ang Bubong</h3>
+                    <p><strong>Mga Dahilan:</strong></p>
+                    <ul>
+                        <li>Butas o basag sa yero</li>
+                        <li>Sira ang silicon sealant</li>
+                        <li>Nakalagay na pako ang nagkakalawang</li>
+                        <li>Hindi tamang overlap ng mga sheet</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Kalawang (Rust)</h3>
+                    <p><strong>Sanhi:</strong></p>
+                    <ul>
+                        <li>Ulan at kahalumigmigan</li>
+                        <li>Natanggal ang protective coating</li>
+                        <li>Malapit sa dagat (salt air)</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Nalalaglag ang Yero</h3>
+                    <p><strong>Mga Dahilan:</strong></p>
+                    <ul>
+                        <li>Malakas na hangin (bagyo)</li>
+                        <li>Kalawang sa mga pako</li>
+                        <li>Hindi sapat ang fasteners</li>
+                        <li>Mahina ang truss/balangkas</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Sobrang Init sa Loob</h3>
+                    <p><strong>Solusyon:</strong></p>
+                    <ul>
+                        <li>Kulang ang insulation</li>
+                        <li>Walang sariling bentilasyon</li>
+                        <li>Direktang sikat ng araw</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Umuusbong ang Lumot at Mold</h3>
+                    <p><strong>Dahilan:</strong></p>
+                    <ul>
+                        <li>Sobrang dampness at walang ventilation</li>
+                        <li>May naiipon na tubig (poor drainage)</li>
+                        <li>Hindi nililinis ang bubong</li>
+                        <li>Natatakpan ng puno ang bubong</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Natatapon ang Yero (Wind Damage)</h3>
+                    <p><strong>Prevensyon:</strong></p>
+                    <ul>
+                        <li>Gumamit ng mas maraming screws (every 2ft)</li>
+                        <li>Mas maganda ang screws kaysa pako</li>
+                        <li>Check ang ridge at edge flashing</li>
+                        <li>Panatilihing intact ang rubber washers</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Bumabaha ang Loob Kapag Umuulan</h3>
+                    <p><strong>Posibleng dahilan:</strong></p>
+                    <ul>
+                        <li>Blocked gutter o downspout</li>
+                        <li>Mali ang slope ng bubong (dapat minimum 10 degrees)</li>
+                        <li>Kulang ang overhang</li>
+                        <li>May cracks sa chimney o vent pipes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Pagkukumpuni Section -->
+            <div id="repairs" class="section">
+                <div class="card">
+                    <h3>Paano Ayusin ang Butas sa Yero</h3>
+                    <p><span class="step-number">1</span> Linisin ang lugar ng butas gamit ang wire brush</p>
+                    <p><span class="step-number">2</span> Lagyan ng rust converter kung may kalawang</p>
+                    <p><span class="step-number">3</span> Gumamit ng roofing patch o flashing</p>
+                    <p><span class="step-number">4</span> I-seal gamit ang roofing cement o silicon sealant</p>
+                    <p><span class="step-number">5</span> Takpan ng malaking patch kung kailangan</p>
+                    <div class="price-tag">Gastos: ₱150-500</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Paano Palitan ang Sirang Yero</h3>
+                    <p><span class="step-number">1</span> Tanggalin ang mga pako ng sirang yero</p>
+                    <p><span class="step-number">2</span> Alisin ang lumang sheet</p>
+                    <p><span class="step-number">3</span> Sukatin ang bagong yero (dapat may 4-6 inches overlap)</p>
+                    <p><span class="step-number">4</span> Ikabit ang bagong sheet gamit ang roofing screws</p>
+                    <p><span class="step-number">5</span> Maglagay ng rubber washer sa bawat screw</p>
+                    <p><span class="step-number">6</span> I-seal ang mga gilid gamit ang sealant</p>
+                    <div class="price-tag">Gastos: ₱500-2,000 per sheet</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Pag-aalis ng Kalawang</h3>
+                    <p><span class="step-number">1</span> Gasgasin ang kalawang gamit ang wire brush o sandpaper</p>
+                    <p><span class="step-number">2</span> Hugasan ng tubig at patuyuin</p>
+                    <p><span class="step-number">3</span> Lagyan ng rust converter o primer</p>
+                    <p><span class="step-number">4</span> Pintahan ng roofing paint o rustproof paint</p>
+                    <p><span class="step-number">5</span> 2-3 coats para mas matibay</p>
+                    <div class="price-tag">Gastos: ₱800-3,000</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Pag-seal ng Tumutulông Bubong</h3>
+                    <p><span class="step-number">1</span> Hanapin ang exact na lugar ng tulo</p>
+                    <p><span class="step-number">2</span> Linisin at patuyuin ang area</p>
+                    <p><span class="step-number">3</span> Gumamit ng waterproof sealant o roofing cement</p>
+                    <p><span class="step-number">4</span> I-apply ng makapal sa butas o bitak</p>
+                    <p><span class="step-number">5</span> Patuyuin ng 24 hours bago umulan</p>
+                    <div class="price-tag">Gastos: ₱200-800</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Pag-install ng Gutter System</h3>
+                    <p><span class="step-number">1</span> Sukatin ang edge ng bubong</p>
+                    <p><span class="step-number">2</span> I-mark ang slight slope (1/4 inch every 10 feet)</p>
+                    <p><span class="step-number">3</span> I-attach ang gutter hangers every 2 feet</p>
+                    <p><span class="step-number">4</span> I-connect ang gutter sections</p>
+                    <p><span class="step-number">5</span> I-seal ang joints gamit ng gutter sealant</p>
+                    <p><span class="step-number">6</span> I-install ang downspouts at elbows</p>
+                    <p><span class="step-number">7</span> I-test gamit ang tubig</p>
+                    <div class="price-tag">Gastos: ₱2,500-8,000</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Pag-insulate ng Bubong (Heat Reduction)</h3>
+                    <p><span class="step-number">1</span> Linisin ang space sa ilalim ng bubong</p>
+                    <p><span class="step-number">2</span> Sukatin ang area para sa insulation</p>
+                    <p><span class="step-number">3</span> Pumili ng insulation type (fiberglass, foam, radiant)</p>
+                    <p><span class="step-number">4</span> I-cut ang insulation sa tamang sukat</p>
+                    <p><span class="step-number">5</span> I-install sa pagitan ng purlins</p>
+                    <p><span class="step-number">6</span> Siguraduhing may air gap (1-2 inches)</p>
+                    <p><span class="step-number">7</span> I-secure gamit ng staples o ties</p>
+                    <div class="price-tag">Gastos: ₱150-400 per sqm</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Pagtanggal ng Lumot at Algae</h3>
+                    <p><span class="step-number">1</span> Mag-spray ng water-bleach solution (1:3 ratio)</p>
+                    <p><span class="step-number">2</span> Hayaan ng 15-20 minutes</p>
+                    <p><span class="step-number">3</span> Brush gently gamit ng soft bristle</p>
+                    <p><span class="step-number">4</span> Rinse thoroughly ng malinis na tubig</p>
+                    <p><span class="step-number">5</span> Ulitin kung kailangan</p>
+                    <p><span class="step-number">6</span> Apply moss killer o zinc strips for prevention</p>
+                    <div class="price-tag">Gastos: ₱300-1,500</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Pag-ayos ng Sagging Roof</h3>
+                    <p><span class="step-number">1</span> I-inspect ang truss at purlins</p>
+                    <p><span class="step-number">2</span> I-check kung may rotting o termites</p>
+                    <p><span class="step-number">3</span> Palitan ang damaged wood members</p>
+                    <p><span class="step-number">4</span> Magdagdag ng extra support beams</p>
+                    <p><span class="step-number">5</span> I-level ang bubong gamit ng jacks</p>
+                    <p><span class="step-number">6</span> I-secure ang lahat ng connections</p>
+                    <p><span class="step-number">7</span> Kumuha ng engineer kung major repair</p>
+                    <div class="price-tag">Gastos: ₱15,000-80,000</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Pag-install ng Ridge Cap (Tuktok ng Bubong)</h3>
+                    <p><span class="step-number">1</span> Clean ang ridge line thoroughly</p>
+                    <p><span class="step-number">2</span> Apply roofing cement along the ridge</p>
+                    <p><span class="step-number">3</span> Center ang ridge cap over the peak</p>
+                    <p><span class="step-number">4</span> Overlap sections by 6 inches</p>
+                    <p><span class="step-number">5</span> Secure with screws every 12 inches</p>
+                    <p><span class="step-number">6</span> Seal all screw holes with sealant</p>
+                    <p><span class="step-number">7</span> Apply final coat of sealant sa joints</p>
+                    <div class="price-tag">Gastos: ₱1,500-4,000</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Pag-install ng Roof Ventilation</h3>
+                    <p><span class="step-number">1</span> Determine best location (near ridge, gable)</p>
+                    <p><span class="step-number">2</span> Mark circular opening gamit ng template</p>
+                    <p><span class="step-number">3</span> Cut hole sa yero using tin snips</p>
+                    <p><span class="step-number">4</span> Install vent flashing around opening</p>
+                    <p><span class="step-number">5</span> Apply roofing cement around flashing</p>
+                    <p><span class="step-number">6</span> Attach turbine vent o whirlybird</p>
+                    <p><span class="step-number">7</span> Seal all edges thoroughly</p>
+                    <p><span class="step-number">8</span> Test airflow from inside attic</p>
+                    <div class="price-tag">Gastos: ₱800-2,500 per vent</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Valley Installation (Daloy ng Tubig)</h3>
+                    <p><span class="step-number">1</span> Clean valley area completely</p>
+                    <p><span class="step-number">2</span> Install valley flashing (metal or PVC)</p>
+                    <p><span class="step-number">3</span> Secure flashing with nails on edges only</p>
+                    <p><span class="step-number">4</span> Apply sealant under flashing edges</p>
+                    <p><span class="step-number">5</span> Cut yero to fit valley at proper angle</p>
+                    <p><span class="step-number">6</span> Overlap valley by 12 inches minimum</p>
+                    <p><span class="step-number">7</span> Never nail through center of valley</p>
+                    <p><span class="step-number">8</span> Seal all connections waterproof</p>
+                    <div class="price-tag">Gastos: ₱500-1,200 per linear meter</div>
+                </div>
+                
+                <div class="card">
+                    <h3>Chimney Flashing Installation</h3>
+                    <p><span class="step-number">1</span> Remove yero around chimney (6 inches clearance)</p>
+                    <p><span class="step-number">2</span> Install base flashing sa baba ng chimney</p>
+                    <p><span class="step-number">3</span> Install step flashing sa sides</p>
+                    <p><span class="step-number">4</span> Each step overlaps previous by 3 inches</p>
+                    <p><span class="step-number">5</span> Install counter flashing sa taas</p>
+                    <p><span class="step-number">6</span> Seal all joints with roofing cement</p>
+                    <p><span class="step-number">7</span> Apply caulk sa chimney-flashing joint</p>
+                    <p><span class="step-number">8</span> Test with water hose</p>
+                    <div class="price-tag">Gastos: ₱3,000-8,000</div>
+                </div>
+            </div>
+            
+            <!-- Materyales Section -->
+            <div id="materials" class="section">
+                <div class="card">
+                    <h3>Mga Pangunahing Materyales</h3>
+                    <ul>
+                        <li><strong>Roofing Screws with Rubber Washer</strong> - ₱2-5 bawat piraso</li>
+                        <li><strong>Roofing Nails (GI)</strong> - ₱180-250 per kilo</li>
+                        <li><strong>Silicon Sealant</strong> - ₱120-300 per tube</li>
+                        <li><strong>Roofing Cement</strong> - ₱150-400 per can</li>
+                        <li><strong>Flashing (Metal)</strong> - ₱150-350 per piece</li>
+                        <li><strong>Ridge Roll</strong> - ₱200-450 per piece</li>
+                        <li><strong>Gutter (Alalayan)</strong> - ₱150-400 per length</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Mga Gamit na Kailangan</h3>
+                    <ul>
+                        <li><strong>Hammer/Martilyo</strong> - Para sa pako</li>
+                        <li><strong>Electric Drill</strong> - Para sa screws</li>
+                        <li><strong>Wire Brush</strong> - Pag-alis ng kalawang</li>
+                        <li><strong>Tape Measure/Metro</strong> - Pagsukay</li>
+                        <li><strong>Tin Snips</strong> - Pag-gupit ng yero</li>
+                        <li><strong>Ladder/Hagdan</strong> - Pag-akyat sa bubong</li>
+                        <li><strong>Safety Harness</strong> - Para sa kaligtasan</li>
+                        <li><strong>Paintbrush/Roller</strong> - Para sa pintura</li>
+                        <li><strong>Caulking Gun</strong> - Para sa sealant</li>
+                        <li><strong>Level</strong> - I-check kung pantay</li>
+                        <li><strong>Chalk Line</strong> - Para sa marking</li>
+                        <li><strong>Pry Bar</strong> - Pag-alis ng lumang yero</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Mga Pintura at Coating</h3>
+                    <ul>
+                        <li><strong>Rustproof Primer</strong> - ₱400-800 per gallon</li>
+                        <li><strong>Roofing Paint</strong> - ₱600-1,200 per gallon</li>
+                        <li><strong>Elastomeric Coating</strong> - ₱800-1,500 per gallon</li>
+                        <li><strong>Roof Sealer</strong> - ₱500-1,000 per gallon</li>
+                        <li><strong>Rust Converter</strong> - ₱200-500 per bottle</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Insulation Materials</h3>
+                    <ul>
+                        <li><strong>Fiberglass Insulation</strong> - ₱120-250 per sqm</li>
+                        <li><strong>Foam Board</strong> - ₱180-400 per sheet</li>
+                        <li><strong>Reflective Foil (Radiant Barrier)</strong> - ₱80-200 per sqm</li>
+                        <li><strong>Spray Foam</strong> - ₱400-800 per sqm (with installation)</li>
+                        <li><strong>Bubble Wrap Insulation</strong> - ₱50-120 per sqm</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Saan Bumili (Hardware Stores)</h3>
+                    <ul>
+                        <li><strong>Wilcon Depot</strong> - Wide selection, quality materials</li>
+                        <li><strong>Handyman</strong> - Affordable, nationwide branches</li>
+                        <li><strong>ACE Hardware</strong> - Premium brands, complete tools</li>
+                        <li><strong>Citi Hardware</strong> - Budget-friendly options</li>
+                        <li><strong>Local Hardware</strong> - Best for bulk discounts</li>
+                        <li><strong>Online: Lazada/Shopee</strong> - Compare prices, delivery</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Mga Tip Section -->
+            <div id="tips" class="section">
+                <div class="card tip">
+                    <h3>Kailan Mag-inspect ng Bubong</h3>
+                    <ul>
+                        <li>Bago mag-tag-ulan (April-May)</li>
+                        <li>Pagkatapos ng malakas na bagyo</li>
+                        <li>Every 6 months para sa regular checkup</li>
+                        <li>Kapag may nakita ng kalawang o sira</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Mga Maling Paniniwala (Myths) sa Roofing</h3>
+                    <ul>
+                        <li><strong>MYTH:</strong> "Mas makapal, mas matibay" - Hindi totoo, gauge ang mas importante</li>
+                        <li><strong>MYTH:</strong> "Pako mas mura, okay na" - Screws with washers mas sulit long-term</li>
+                        <li><strong>MYTH:</strong> "Hindi kailangan ng overlap sa taas" - Overlap everywhere para sure</li>
+                        <li><strong>MYTH:</strong> "Pwede na mag-repair kahit umuulan" - Big NO, dapat tuyo</li>
+                        <li><strong>MYTH:</strong> "Mas maraming layers, mas protected" - Wrong, drainage system ang key</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Pro Tricks mula sa Expert Roofers</h3>
+                    <ul>
+                        <li><strong>Soap Water Test:</strong> Spray soapy water sa suspected leak, bubbles indicate exact hole</li>
+                        <li><strong>Ice Dam Prevention:</strong> Maglagay ng electric heat tape sa gutter (₱800-1,500)</li>
+                        <li><strong>Chalk Marker:</strong> Use chalk para i-mark ang measurement sa sheet before cutting</li>
+                        <li><strong>Screw Depth:</strong> Dapat flush with washer but not crushing it</li>
+                        <li><strong>Paint Direction:</strong> Always paint downward following water flow</li>
+                        <li><strong>Ventilation Rule:</strong> 1 sqft vent per 150 sqft attic floor</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Seasonal Roofing Calendar</h3>
+                    <ul>
+                        <li><strong>January-February (Dry):</strong> Best time for major repairs, painting</li>
+                        <li><strong>March-May (Hot):</strong> Pre-rainy inspection, seal all cracks</li>
+                        <li><strong>June-September (Rainy):</strong> Emergency repairs only, monitor leaks</li>
+                        <li><strong>October-December (Cool):</strong> Post-typhoon assessment, prepare for dry season work</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Color Selection Tips para sa Yero</h3>
+                    <ul>
+                        <li><strong>White/Light:</strong> Reflects heat, cooler inside (save 30% cooling)</li>
+                        <li><strong>Red Oxide:</strong> Classic, hides rust stains well</li>
+                        <li><strong>Green:</strong> Eco-friendly vibe, good for provincial</li>
+                        <li><strong>Blue:</strong> Modern, pero shows dirt quickly</li>
+                        <li><strong>Dark Colors:</strong> Absorbs heat, not recommended sa Pinas</li>
+                        <li><strong>Pro Tip:</strong> Light colors = Lower electric bill</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Safety Tips sa Pag-akyat ng Bubong</h3>
+                    <ul>
+                        <li>Gumamit ng matibay na hagdan</li>
+                        <li>Huwag umakyat kapag maulan o mahangin</li>
+                        <li>Magdala ng kasama para may tutulong</li>
+                        <li>Magsuot ng safety harness kung mataas</li>
+                        <li>Mag-ingat sa mga live wires</li>
+                        <li>Lakarin ang purlin, hindi sa gitna ng yero</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Mga Paraan para Tumagal ang Bubong</h3>
+                    <ul>
+                        <li>Regular na paglilinis ng dried leaves at basura</li>
+                        <li>Promptong pag-ayos ng maliit na sira</li>
+                        <li>Repaint every 3-5 years</li>
+                        <li>Gumamit ng quality materials</li>
+                        <li>Proper installation with correct overlap</li>
+                        <li>Good drainage system (gutter)</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Paano Pumili ng Contractor</h3>
+                    <ul>
+                        <li>Humingi ng reference at tingnan ang past work</li>
+                        <li>Kumuha ng 3 quotations para macompare</li>
+                        <li>Siguruhing may written contract</li>
+                        <li>Itanong ang warranty period</li>
+                        <li>Huwag magbayad ng full bago matapos ang work</li>
+                        <li>Piliin ang may experience sa inyong roof type</li>
+                    </ul>
+                </div>
+                
+                <div class="card tip">
+                    <h3>Mga Tip para Makatipid</h3>
+                    <ul>
+                        <li>Bumili ng materyales during off-season (less demand)</li>
+                        <li>Isang bagsakan ang pagbili sa supplier</li>
+                        <li>DIY kung simple repairs lang</li>
+                        <li>Mag-group buying sa kapitbahay</li>
+                        <li>Gawin ang repairs before major damage</li>
+                        <li>Compare prices online at physical stores</li>
+                    </ul>
+                </div>
+                
+                <div class="card warning">
+                    <h3>Kailan Kailangan ng Professional</h3>
+                    <ul>
+                        <li>Malaking area ang kailangang palitan</li>
+                        <li>May structural damage sa truss</li>
+                        <li>Mataas at delikadong bubong</li>
+                        <li>Kailangan ng special equipment</li>
+                        <li>Hindi sigurado sa proper installation</li>
+                        <li>May insurance claim</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🏠 Filipino Roofing Repair Guide © 2024</p>
+            <p>Para sa mas ligtas at matibay na bubong</p>
+        </footer>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            const tabs = document.querySelectorAll('.nav-tab');
+            
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Roof Area Calculator
+        function calculateRoof() {
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+            const pitch = parseFloat(document.getElementById('pitch').value);
+            
+            if (!length || !width) {
+                alert('Please enter valid measurements');
+                return;
+            }
+            
+            const baseArea = length * width;
+            const actualArea = baseArea * pitch;
+            const withWastage = actualArea * 1.1;
+            const sheets = Math.ceil(withWastage / 0.99); // 8ft sheet coverage
+            
+            document.getElementById('totalArea').textContent = actualArea.toFixed(2);
+            document.getElementById('wastageArea').textContent = withWastage.toFixed(2);
+            document.getElementById('sheets').textContent = sheets;
+            document.getElementById('roofResult').style.display = 'block';
+        }
+        
+        // Material Cost Calculator
+        function calculateMaterials() {
+            const numSheets = parseInt(document.getElementById('numSheets').value);
+            const pricePerSheet = parseInt(document.getElementById('roofType').value);
+            
+            const sheetCost = numSheets * pricePerSheet;
+            const screwCost = numSheets * 3 * 3; // 3 screws per sheet at ₱3 each
+            const sealantCost = Math.ceil(numSheets / 10) * 200; // 1 tube per 10 sheets
+            const ridgeCost = Math.ceil(numSheets / 5) * 300; // estimate
+            const total = sheetCost + screwCost + sealantCost + ridgeCost;
+            
+            document.getElementById('sheetCost').textContent = sheetCost.toLocaleString();
+            document.getElementById('screwCost').textContent = screwCost.toLocaleString();
+            document.getElementById('sealantCost').textContent = sealantCost.toLocaleString();
+            document.getElementById('ridgeCost').textContent = ridgeCost.toLocaleString();
+            document.getElementById('totalCost').textContent = total.toLocaleString();
+            document.getElementById('materialResult').style.display = 'block';
+        }
+        
+        // Paint Calculator
+        function calculatePaint() {
+            const area = parseFloat(document.getElementById('paintArea').value);
+            const coats = parseInt(document.getElementById('coats').value);
+            
+            if (!area) {
+                alert('Please enter roof area');
+                return;
+            }
+            
+            const primerGal = Math.ceil((area / 25)); // 25 sqm per gallon
+            const paintGal = Math.ceil((area * coats) / 20); // 20 sqm per gallon
+            
+            const primerCost = primerGal * 600;
+            const paintCost = paintGal * 900;
+            const total = primerCost + paintCost;
+            
+            document.getElementById('primerGal').textContent = primerGal;
+            document.getElementById('paintGal').textContent = paintGal;
+            document.getElementById('primerCost').textContent = primerCost.toLocaleString();
+            document.getElementById('paintCost').textContent = paintCost.toLocaleString();
+            document.getElementById('totalPaintCost').textContent = total.toLocaleString();
+            document.getElementById('paintResult').style.display = 'block';
+        }
+        
+        // ROI Calculator
+        function calculateROI() {
+            const age = parseInt(document.getElementById('roofAge').value);
+            const repair = parseFloat(document.getElementById('repairCost').value);
+            const replace = parseFloat(document.getElementById('replaceCost').value);
+            
+            if (!age || !repair || !replace) {
+                alert('Please fill all fields');
+                return;
+            }
+            
+            const expectedLife = 15; // average yero lifespan
+            const remainingLife = Math.max(0, expectedLife - age);
+            const repairPercent = (repair / replace * 100).toFixed(0);
+            
+            let recommendation = '';
+            let details = '';
+            
+            if (age >= 12 || repairPercent > 50) {
+                recommendation = '💡 RECOMMEND: Replace the roof';
+                details = `Your roof is ${age} years old. Repair cost is ${repairPercent}% of replacement cost. At this age, replacement provides better long-term value.`;
+            } else if (repairPercent > 30) {
+                recommendation = '⚠️ CONSIDER: Carefully evaluate both options';
+                details = `Repair cost is ${repairPercent}% of replacement. With ${remainingLife} years expected life remaining, repair might work if damage is isolated.`;
+            } else {
+                recommendation = '✅ RECOMMEND: Repair is cost-effective';
+                details = `Repair cost is only ${repairPercent}% of replacement with ${remainingLife} years life remaining. Repairing is the smart choice.`;
+            }
+            
+            document.getElementById('roiRecommendation').textContent = recommendation;
+            document.getElementById('roiDetails').textContent = details;
+            document.getElementById('roiResult').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
